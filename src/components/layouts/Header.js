@@ -309,7 +309,7 @@ export default function Header() {
           <h1>러쉬</h1>
           <div class="header-logo">
             <a href="./index.html">
-              <img src="./images/header-logo.png" alt="러쉬" />
+              <img src={headerLogo} alt="러쉬" />
             </a>
           </div> {/* header-logo */}
 
@@ -477,7 +477,7 @@ export default function Header() {
           </nav>
           <div class="header-icon">
             <button type="button" class="sch" aria-label="검색" onclick="openNav()">
-              <img src="./images/header-icon-search.png" alt="검색하기" />
+              <img src={headerIconSearch} alt="검색하기" />
             </button>
 
             {/* 검색 (button) 클릭하면 나오는 화면 */}
@@ -490,7 +490,7 @@ export default function Header() {
                   <label for="searchbox"></label>
                   <input type="text" id="searchbox" placeholder="혹시 더티 마니아인가요?" />
                   <label for="searchbtn"></label>
-                  <input type="image" id="searchbtn" src="./images/btn_topsearch_search.png" />
+                  <input type="image" id="searchbtn" src={btnTopsearchSearch} />
                 </form>
                 <p>지금 가장 많이 찾아요!</p>
                 <ul>
@@ -507,11 +507,11 @@ export default function Header() {
 
 
             <a href="javascript:void(0)" class="cart" aria-label="장바구니">
-              <img src="./images/header-icon-cart.png" alt="장바구니" />
+              <img src={headerIconCart} alt="장바구니" />
             </a>
 
             <button type="button" class="mpg" aria-label="마이페이지" onclick="location.href='./login.html'">
-              <img src="./images/header-icon-mypage.png" alt="마이페이지" />
+              <img src={headerIconMypage} alt="마이페이지" />
               <div class="mpg-drop">
                 <ul class="mpg-drop-inner">
                   <li><a href="./login.html">로그인</a></li>
