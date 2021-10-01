@@ -1,9 +1,9 @@
-import FooterLogo from '../../images/footer-logo.png';
-import FacebookLogo from '../../images/footer-icon-facebook.gif';
-import InstagramLogo from '../../images/footer-icon-instagram.gif';
-import KakaoLogo from '../../images/footer-icon-kakao.gif';
-import NaverLogo from '../../images/footer-icon-naver.gif';
-import YoutubeLogo from '../../images/footer-icon-youtube.gif';
+import footerLogo from '../../images/footer-logo.png';
+import facebookLogo from '../../images/footer-icon-facebook.gif';
+import instagramLogo from '../../images/footer-icon-instagram.gif';
+import kakaoLogo from '../../images/footer-icon-kakao.gif';
+import naverLogo from '../../images/footer-icon-naver.gif';
+import youtubeLogo from '../../images/footer-icon-youtube.gif';
 
 
 
@@ -16,7 +16,7 @@ export default function Footer() {
         <div class="footer-left">
           <h6 aria-label="러쉬로고">
             <a href="javascript:void(0)">
-              <img src={FooterLogo} alt="러쉬로고" />
+              <img src={footerLogo} alt="러쉬로고" />
             </a>
           </h6>
 
@@ -31,11 +31,11 @@ export default function Footer() {
           <a href="mailto:order@lush.co.kr" class="mail2">order@lush.co.kr</a>
 
           <ul class="sns">
-            <li><a href="javascript:void(0)"><img src={FacebookLogo} alt="페이스북" /></a></li>
-            <li><a href="javascript:void(0)"><img src={InstagramLogo} alt="인스타그램" /></a></li>
-            <li><a href="javascript:void(0)"><img src={YoutubeLogo} alt="유튜브" /></a></li>
-            <li><a href="javascript:void(0)"><img src={KakaoLogo} alt="카카오톡 플친" /></a></li>
-            <li><a href="javascript:void(0)"><img src={NaverLogo} alt="네이버" /></a></li>
+            <li><a href="javascript:void(0)"><img src={facebookLogo} alt="페이스북" /></a></li>
+            <li><a href="javascript:void(0)"><img src={instagramLogo} alt="인스타그램" /></a></li>
+            <li><a href="javascript:void(0)"><img src={youtubeLogo} alt="유튜브" /></a></li>
+            <li><a href="javascript:void(0)"><img src={kakaoLogo} alt="카카오톡 플친" /></a></li>
+            <li><a href="javascript:void(0)"><img src={naverLogo} alt="네이버" /></a></li>
           </ul>
         </div> {/* footer-left */}
 

@@ -476,14 +476,14 @@ export default function Header() {
 
           </nav>
           <div class="header-icon">
-            <button type="button" class="sch" aria-label="검색" onclick="openNav()">
+            <button type="button" class="sch" aria-label="검색" onClick="openNav()">
               <img src={headerIconSearch} alt="검색하기" />
             </button>
 
             {/* 검색 (button) 클릭하면 나오는 화면 */}
             <div class="overlay" id="myNav">
               {/* 닫힘 버튼 */}
-              <button onclick="javascript:closeNav()" class="closebtn">&times;</button>
+              <button onClick="javascript:closeNav()" class="closebtn">&times;</button>
 
               <div class="overlay-content">
                 <form action="javascript:void(0)" method="">
@@ -510,7 +510,7 @@ export default function Header() {
               <img src={headerIconCart} alt="장바구니" />
             </a>
 
-            <button type="button" class="mpg" aria-label="마이페이지" onclick="location.href='./login.html'">
+            <button type="button" class="mpg" aria-label="마이페이지" onClick="location.href='./login.html'">
               <img src={headerIconMypage} alt="마이페이지" />
               <div class="mpg-drop">
                 <ul class="mpg-drop-inner">
