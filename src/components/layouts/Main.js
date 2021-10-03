@@ -1,3 +1,7 @@
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 import titleImg from "../../images/content2-title.png";
 import magicCrystals from "../../images/content1-slide1-1.jpg";
 import magnerMint from "../../images/content1-slide1-2.jpg";
@@ -15,6 +19,13 @@ import theOliveBrench from "../../images/content1-slide2-4.jpg";
 import catastropyCosmetic from "../../images/content1-slide2-5.jpg";
 import maskOfMagnermint from "../../images/content1-slide2-6.jpg";
 
+import slideBanner1 from "../../images/main-banner1.jpg";
+import slideBanner2 from "../../images/main-banner2.jpg";
+import slideBanner3 from "../../images/main-banner3.jpg";
+import slideBanner4 from "../../images/main-banner4.jpg";
+import slideBanner5 from "../../images/main-banner5.jpg";
+import slideBanner6 from "../../images/main-banner6.jpg";
+
 const MainWrapper = styled.div`
   /* 메인 배너 */
   .main-banner {
@@ -29,39 +40,29 @@ const MainWrapper = styled.div`
     height: 580px;
   }
 
-  .main-slide {
-    display: none;
-  }
-
   .main-banner .main-slide1 {
-    width: auto;
     height: 580px;
-    background: url(./images/main-banner1.jpg) no-repeat center top;
+    background: url(${slideBanner1}) no-repeat center top;
   }
   .main-banner .main-slide2 {
-    width: auto;
     height: 580px;
-    background: url(./images/main-banner2.jpg) no-repeat center top;
+    background: url(${slideBanner2}) no-repeat center top;
   }
   .main-banner .main-slide3 {
-    width: auto;
     height: 580px;
-    background: url(./images/main-banner3.jpg) no-repeat center top;
+    background: url(${slideBanner3}) no-repeat center top;
   }
   .main-banner .main-slide4 {
-    width: auto;
     height: 580px;
-    background: url(./images/main-banner4.jpg) no-repeat center top;
+    background: url(${slideBanner4}) no-repeat center top;
   }
   .main-banner .main-slide5 {
-    width: auto;
     height: 580px;
-    background: url(./images/main-banner5.jpg) no-repeat center top;
+    background: url(${slideBanner5}) no-repeat center top;
   }
   .main-banner .main-slide6 {
-    width: auto;
     height: 580px;
-    background: url(./images/main-banner6.jpg) no-repeat center top;
+    background: url(${slideBanner6}) no-repeat center top;
   }
 
   .active,
@@ -72,8 +73,21 @@ const MainWrapper = styled.div`
   .dot-wrap {
     position: absolute;
     top: 50%;
-    right: 20px;
     transform: translateY(-50%);
+    right: 20px;
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  .slick-dots {
+    width: fit-content !important;
+  }
+
+  .slick-dots li {
+    display: block !important;
   }
 
   .dot {
@@ -208,19 +222,51 @@ const MainWrapper = styled.div`
 `;
 
 export default function Main() {
+  const settings = {
+    fade: true,
+    dots: true,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    speed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    appendDots: dots => (
+      <div className="dot-wrap">
+        <ul /*style={{ 
+          width: '180px !important', 
+          position: 'absolute',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          right: '0',
+          display: 'block',
+          padding: '0',
+          margin: '0',
+          listStyle: 'none',
+          textAlign: 'center' }}*/> {dots} </ul>
+        </div>
+    ),
+    customPaging: i => (
+      <div className="dot" style={{
+      }}
+      >
+        </div>
+    )};
+
   return (
     <MainWrapper>
       <main>
         <article>
           <h3>메인 광고 배너</h3>
           <div class="main-banner">
-            <div class="main-slide main-slide1 fade">
+            <Slider {...settings}>
+            <div class="main-slide main-slide1">
               <a href="javascript:void(0)"></a>
             </div>
-            <div class="main-slide main-slide2 fade">
+            <div class="main-slide main-slide2">
               <a href="javascript:void(0)"></a>
             </div>
-            <div class="main-slide main-slide3 fade">
+            <div class="main-slide main-slide3">
               <a href="javascript:void(0)"></a>
             </div>
             <div class="main-slide main-slide4 fade">
@@ -232,15 +278,16 @@ export default function Main() {
             <div class="main-slide main-slide6 fade">
               <a href="javascript:void(0)"></a>
             </div>
+            </Slider>
 
-            <div class="dot-wrap">
+            {/* <div class="dot-wrap">
               <span class="dot" onClick="currentSlide(1)"></span>
               <span class="dot" onClick="currentSlide(2)"></span>
               <span class="dot" onClick="currentSlide(3)"></span>
               <span class="dot" onClick="currentSlide(4)"></span>
               <span class="dot" onClick="currentSlide(5)"></span>
               <span class="dot" onClick="currentSlide(6)"></span>
-            </div>
+            </div> */}
           </div>
         </article>
         <section>

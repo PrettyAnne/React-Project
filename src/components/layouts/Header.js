@@ -11,6 +11,7 @@ const HeaderWrapper = styled.div`
 .header-wrap {
   position: fixed;
   top: 0;
+  width: 100%;
   min-width: 1280px;
   height: 100px;
   background-color: #000;
@@ -237,12 +238,12 @@ h1,h2,h3,h4,h5 {
 
 /* 검색창 */
 .overlay {
+  display: block;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  display: none;
   padding: 100px;
   width: 100%;
   height: 100%;
@@ -301,7 +302,7 @@ h1,h2,h3,h4,h5 {
 
 export default function Header() {
   const [isMyNavShow, setIsMyNavShow] = useState(false);
-
+  
   return (
     <HeaderWrapper>
       <header>
@@ -476,14 +477,14 @@ export default function Header() {
 
           </nav>
           <div class="header-icon">
-            <button type="button" class="sch" aria-label="검색" onClick="openNav()">
+            <button type="button" class="sch" aria-label="검색" onClick={() => {setIsMyNavShow(true);}}>
               <img src={headerIconSearch} alt="검색하기" />
             </button>
 
-            {/* 검색 (button) 클릭하면 나오는 화면 */}
-            <div class="overlay" id="myNav">
-              {/* 닫힘 버튼 */}
-              <button onClick="javascript:closeNav()" class="closebtn">&times;</button>
+            {
+            
+            isMyNavShow && (<div class="overlay" id="myNav">
+              <button onClick={() => {setIsMyNavShow(false);}} class="closebtn">&times;</button>
 
               <div class="overlay-content">
                 <form action="javascript:void(0)" method="">
@@ -501,9 +502,9 @@ export default function Header() {
                   <li><a href="javascript:void(0)">#입욕제</a></li>
                   <li><a href="javascript:void(0)">#더티</a></li>
                 </ul>
-              </div> {/* overlay-content */}
+              </div>
 
-            </div> {/* overlay */}
+            </div>)}
 
 
             <a href="javascript:void(0)" class="cart" aria-label="장바구니">
