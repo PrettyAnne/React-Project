@@ -280,6 +280,14 @@ export default function Main() {
     )
   };
 
+  const settingsReview = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  };
+
   return (
     <MainWrapper>
       <main>
@@ -313,183 +321,184 @@ export default function Main() {
           <div class="product-slide-wrap">
             <img src={titleImg} alt="나만 알고 싶은 향기" />
             <div class="product-slide">
-              <div class="prod1">
-                <a href="./magic-crystal.html">
-                  <img src={magicCrystals} alt="매직 크리스탈스 300g/600g" />
-                  <br />
-                  <span class="first">매직 크리스탈스 300g/600g</span>
-                  <br />
-                  <span class="second">#스크럽 #민트의마법 #시원해져라</span>
-                  <br />
-                  <span class="third">\ 32,000</span>
-                </a>
-              </div>
+              <Slider {...settingsReview}>
+                <div class="prod1">
+                  <a href="./magic-crystal.html">
+                    <img src={magicCrystals} alt="매직 크리스탈스 300g/600g" />
+                    <br />
+                    <span class="first">매직 크리스탈스 300g/600g</span>
+                    <br />
+                    <span class="second">#스크럽 #민트의마법 #시원해져라</span>
+                    <br />
+                    <span class="third">\ 32,000</span>
+                  </a>
+                </div>
 
-              <div class="prod2">
-                <a href="javascript:void(0)">
-                  <img
-                    src={magnerMint}
-                    alt="마스크 오브 매그너민트 125g/315g"
-                  />
-                  <br />
-                  <span class="first">마스크 오브 매그너민트 125g/315g</span>
-                  <br />
-                  <span class="second">#꿀의촉촉함 #데일리백 #민트팩</span>
-                  <br />
-                  <span class="third">\ 20,000</span>
-                </a>
-              </div>
+                <div class="prod2">
+                  <a href="javascript:void(0)">
+                    <img
+                      src={magnerMint}
+                      alt="마스크 오브 매그너민트 125g/315g"
+                    />
+                    <br />
+                    <span class="first">마스크 오브 매그너민트 125g/315g</span>
+                    <br />
+                    <span class="second">#꿀의촉촉함 #데일리백 #민트팩</span>
+                    <br />
+                    <span class="third">\ 20,000</span>
+                  </a>
+                </div>
 
-              <div class="prod3">
-                <a href="javascript:void(0)">
-                  <img
-                    src={oliveBrench}
-                    alt="더 올리브 브랜치 100g/250g/500g"
-                  />
-                  <br />
-                  <span class="first">더 올리브 브랜치 100g/250g/500g</span>
-                  <br />
-                  <span class="second">#오일듬뿍샤워젤 #보습샤워시작</span>
-                  <br />
-                  <span class="third">\ 17,000</span>
-                </a>
-              </div>
+                <div class="prod3">
+                  <a href="javascript:void(0)">
+                    <img
+                      src={oliveBrench}
+                      alt="더 올리브 브랜치 100g/250g/500g"
+                    />
+                    <br />
+                    <span class="first">더 올리브 브랜치 100g/250g/500g</span>
+                    <br />
+                    <span class="second">#오일듬뿍샤워젤 #보습샤워시작</span>
+                    <br />
+                    <span class="third">\ 17,000</span>
+                  </a>
+                </div>
 
-              <div class="prod4">
-                <a href="javascript:void(0)">
-                  <img
-                    src={dirtyBodySpary}
-                    alt="더티 보디 스프레이"
-                  />
-                  <br />
-                  <span class="first">더티 보디 스프레이</span>
-                  <br />
-                  <span class="second">#스테디셀러 #뒤돌아보는향 #재구매각</span>
-                  <br />
-                  <span class="third">\ 50,000</span>
-                </a>
-              </div>
+                <div class="prod4">
+                  <a href="javascript:void(0)">
+                    <img
+                      src={dirtyBodySpary}
+                      alt="더티 보디 스프레이"
+                    />
+                    <br />
+                    <span class="first">더티 보디 스프레이</span>
+                    <br />
+                    <span class="second">#스테디셀러 #뒤돌아보는향 #재구매각</span>
+                    <br />
+                    <span class="third">\ 50,000</span>
+                  </a>
+                </div>
 
-              <div class="prod5">
-                <a href="javascript:void(0)">
-                  <img
-                    src={daddyO}
-                    alt="대디-오"
-                  />
-                  <br />
-                  <span class="first">대디-오 100g/250g/500g</span>
-                  <br />
-                  <span class="second">#오래머무는잔향 #베스트샴푸</span>
-                  <br />
-                  <span class="third">\ 19,000</span>
-                </a>
-              </div>
+                <div class="prod5">
+                  <a href="javascript:void(0)">
+                    <img
+                      src={daddyO}
+                      alt="대디-오"
+                    />
+                    <br />
+                    <span class="first">대디-오 100g/250g/500g</span>
+                    <br />
+                    <span class="second">#오래머무는잔향 #베스트샴푸</span>
+                    <br />
+                    <span class="third">\ 19,000</span>
+                  </a>
+                </div>
 
-              <div class="prod6">
-                <a href="javascript:void(0)">
-                  <img
-                    src={newOO}
-                    alt="뉴"
-                  />
-                  <br />
-                  <span class="first">뉴</span>
-                  <br />
-                  <span class="second">#착한고체샴푸 #뿌리튼튼</span>
-                  <br />
-                  <span class="third">\ 18,000</span>
-                </a>
-              </div>
+                <div class="prod6">
+                  <a href="javascript:void(0)">
+                    <img
+                      src={newOO}
+                      alt="뉴"
+                    />
+                    <br />
+                    <span class="first">뉴</span>
+                    <br />
+                    <span class="second">#착한고체샴푸 #뿌리튼튼</span>
+                    <br />
+                    <span class="third">\ 18,000</span>
+                  </a>
+                </div>
 
-              <div class="prod7">
-                <a href="javascript:void(0)">
-                  <img
-                    src={dontLookatme}
-                    alt="돈트 룩 앳 미"
-                  />
-                  <br />
-                  <span class="first">더 올리브 브랜치 100g/250g/500g</span>
-                  <br />
-                  <span class="second">#프레쉬마스크 #상큼한 레몬팩 #쌀알갱이</span>
-                  <br />
-                  <span class="third">\ 25,000</span>
-                </a>
-              </div>
+                <div class="prod7">
+                  <a href="javascript:void(0)">
+                    <img
+                      src={dontLookatme}
+                      alt="돈트 룩 앳 미"
+                    />
+                    <br />
+                    <span class="first">더 올리브 브랜치 100g/250g/500g</span>
+                    <br />
+                    <span class="second">#프레쉬마스크 #상큼한 레몬팩 #쌀알갱이</span>
+                    <br />
+                    <span class="third">\ 25,000</span>
+                  </a>
+                </div>
 
-              <div class="prod8">
-                <a href="javascript:void(0)">
-                  <img
-                    src={seeVegi}
-                    alt="씨 베지터블"
-                  />
-                  <br />
-                  <span class="first">씨 베지터블</span>
-                  <br />
-                  <span class="second">#솝 #바다의청량함을그대로</span>
-                  <br />
-                  <span class="third">\ 10,000</span>
-                </a>
-              </div>
+                <div class="prod8">
+                  <a href="javascript:void(0)">
+                    <img
+                      src={seeVegi}
+                      alt="씨 베지터블"
+                    />
+                    <br />
+                    <span class="first">씨 베지터블</span>
+                    <br />
+                    <span class="second">#솝 #바다의청량함을그대로</span>
+                    <br />
+                    <span class="third">\ 10,000</span>
+                  </a>
+                </div>
 
-              <div class="prod9">
-                <a href="javascript:void(0)">
-                  <img
-                    src={loveLove}
-                    alt="럽 럽 럽"
-                  />
-                  <br />
-                  <span class="first">럽 럽 럽 300g/600g</span>
-                  <br />
-                  <span class="second">#샤워스크럽 #구석구석소금롤링</span>
-                  <br />
-                  <span class="third">\ 30,000</span>
-                </a>
-              </div>
+                <div class="prod9">
+                  <a href="javascript:void(0)">
+                    <img
+                      src={loveLove}
+                      alt="럽 럽 럽"
+                    />
+                    <br />
+                    <span class="first">럽 럽 럽 300g/600g</span>
+                    <br />
+                    <span class="second">#샤워스크럽 #구석구석소금롤링</span>
+                    <br />
+                    <span class="third">\ 30,000</span>
+                  </a>
+                </div>
 
-              <div class="prod10">
-                <a href="javascript:void(0)">
-                  <img
-                    src={sexBom}
-                    alt="섹스 밤"
-                  />
-                  <br />
-                  <span class="first">섹스 밤</span>
-                  <br />
-                  <span class="second">#로맨틱 #섹시한밤 #일랑일랑꽃</span>
-                  <br />
-                  <span class="third">\ 12,000</span>
-                </a>
-              </div>
+                <div class="prod10">
+                  <a href="javascript:void(0)">
+                    <img
+                      src={sexBom}
+                      alt="섹스 밤"
+                    />
+                    <br />
+                    <span class="first">섹스 밤</span>
+                    <br />
+                    <span class="second">#로맨틱 #섹시한밤 #일랑일랑꽃</span>
+                    <br />
+                    <span class="third">\ 12,000</span>
+                  </a>
+                </div>
 
-              <div class="prod11">
-                <a href="javascript:void(0)">
-                  <img
-                    src={angelsOn}
-                    alt="엔젤스 온 배어 스킨"
-                  />
-                  <br />
-                  <span class="first">엔젤스 온 배어 스킨 100g/250g</span>
-                  <br />
-                  <span class="second">#클렌저 #산뜻한마무리 #스크럽도함께</span>
-                  <br />
-                  <span class="third">\ 22,000</span>
-                </a>
-              </div>
+                <div class="prod11">
+                  <a href="javascript:void(0)">
+                    <img
+                      src={angelsOn}
+                      alt="엔젤스 온 배어 스킨"
+                    />
+                    <br />
+                    <span class="first">엔젤스 온 배어 스킨 100g/250g</span>
+                    <br />
+                    <span class="second">#클렌저 #산뜻한마무리 #스크럽도함께</span>
+                    <br />
+                    <span class="third">\ 22,000</span>
+                  </a>
+                </div>
 
-              <div class="prod12">
-                <a href="javascript:void(0)">
-                  <img
-                    src={twilight}
-                    alt="트와일라잇"
-                  />
-                  <br />
-                  <span class="first">트와일라잇</span>
-                  <br />
-                  <span class="second">#보디스프레이 #차분한달콤함</span>
-                  <br />
-                  <span class="third">\ 50,000</span>
-                </a>
-              </div>
-
+                <div class="prod12">
+                  <a href="javascript:void(0)">
+                    <img
+                      src={twilight}
+                      alt="트와일라잇"
+                    />
+                    <br />
+                    <span class="first">트와일라잇</span>
+                    <br />
+                    <span class="second">#보디스프레이 #차분한달콤함</span>
+                    <br />
+                    <span class="third">\ 50,000</span>
+                  </a>
+                </div>
+              </Slider>
             </div>
             {/* product-slide */}
           </div>
