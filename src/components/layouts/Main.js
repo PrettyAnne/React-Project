@@ -1,11 +1,8 @@
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import titleImg from "../../images/content2-title.png";
-import magicCrystals from "../../images/content1-slide1-1.jpg";
-import magnerMint from "../../images/content1-slide1-2.jpg";
-import oliveBrench from "../../images/content1-slide1-3.jpg";
 import consTantin from "../../images/content2-banner1.jpg";
 import styled from "styled-components";
 import saltScrub from "../../images/content2-banner2.gif";
@@ -25,6 +22,19 @@ import slideBanner3 from "../../images/main-banner3.jpg";
 import slideBanner4 from "../../images/main-banner4.jpg";
 import slideBanner5 from "../../images/main-banner5.jpg";
 import slideBanner6 from "../../images/main-banner6.jpg";
+
+import magicCrystals from "../../images/content1-slide1-1.jpg";
+import magnerMint from "../../images/content1-slide1-2.jpg";
+import oliveBrench from "../../images/content1-slide1-3.jpg";
+import dirtyBodySpary from "../../images/content1-slide1-4.jpg";
+import daddyO from "../../images/content1-slide1-5.jpg";
+import newOO from "../../images/content1-slide1-6.jpg";
+import dontLookatme from "../../images/content1-slide1-7.jpg";
+import seeVegi from "../../images/content1-slide1-8.jpg";
+import loveLove from "../../images/content1-slide1-9.png";
+import sexBom from "../../images/content1-slide1-10.jpg";
+import angelsOn from "../../images/content1-slide1-11.jpg";
+import twilight from "../../images/content1-slide1-12.jpg";
 
 const MainWrapper = styled.div`
   /* 메인 배너 */
@@ -84,6 +94,10 @@ const MainWrapper = styled.div`
 
   .slick-dots {
     width: fit-content !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
   }
 
   .slick-dots li {
@@ -126,6 +140,17 @@ const MainWrapper = styled.div`
     }
   }
 
+  /* 나만 알고싶은향기 wrap */
+  .myAroma {
+    position: relative;
+  }
+
+  .myAroma::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
   /* 제품 슬라이더 */
   .product-slide-wrap {
     min-width: 1280px;
@@ -162,59 +187,70 @@ const MainWrapper = styled.div`
   /* 사이드 리뷰 슬라이더 */
   .product-slide-reviewwrap {
     position: absolute;
-    top: 650px;
-    right: 50px;
+    top: -37px;
+    right: 0;
+  }
+
+  /* 안내배너 */
+  .info-wrap {
+    display: flex;
+    padding: 100px 0;
   }
 
   .info-wrap img {
     width: 100%;
     vertical-align: middle;
   }
+
   .info-wrap a {
     display: inline-block;
   }
 
-  .info-wrap {
-    display: flex;
-    padding: 100px 0;
-  }
   .info-wrap-left {
     flex-direction: row;
   }
+
   .info-wrap-right {
     flex-direction: row;
   }
+
   .info-wrap-right-top {
     height: 50%;
   }
+
   .info-wrap-right-bottom {
     display: flex;
     height: 50%;
   }
+
   .info-wrap-right-bottom-left {
     flex-direction: row;
   }
+
   .info-wrap-right-bottom-right {
     flex-direction: row;
   }
 
-  /* 광고 ?? */
+  /* 탱글드 어쩌고 */
   .newprod-adv-wrap {
     display: flex;
     min-width: 1280px;
     height: 700px;
     padding: 40px 100px 0 300px;
   }
+
   .newprod-adv-wrap .newprod-adv-text {
     margin-right: 40px;
     padding-top: 130px;
   }
+
   .newprod-adv-wrap .newprod-adv-text strong {
     display: inline-block;
     font-size: 42px;
     padding: 0 0 20px;
     letter-spacing: -3px;
   }
+
   .newprod-adv-wrap .newprod-adv-text p {
     display: block;
     color: #333;
@@ -233,25 +269,16 @@ export default function Main() {
     slidesToScroll: 1,
     appendDots: dots => (
       <div className="dot-wrap">
-        <ul /*style={{ 
-          width: '180px !important', 
-          position: 'absolute',
-          top: '50%',
-          transform: 'translateY(-50%)',
-          right: '0',
-          display: 'block',
-          padding: '0',
-          margin: '0',
-          listStyle: 'none',
-          textAlign: 'center' }}*/> {dots} </ul>
-        </div>
+        <ul> {dots} </ul>
+      </div>
     ),
     customPaging: i => (
       <div className="dot" style={{
       }}
       >
-        </div>
-    )};
+      </div>
+    )
+  };
 
   return (
     <MainWrapper>
@@ -260,37 +287,28 @@ export default function Main() {
           <h3>메인 광고 배너</h3>
           <div class="main-banner">
             <Slider {...settings}>
-            <div class="main-slide main-slide1">
-              <a href="javascript:void(0)"></a>
-            </div>
-            <div class="main-slide main-slide2">
-              <a href="javascript:void(0)"></a>
-            </div>
-            <div class="main-slide main-slide3">
-              <a href="javascript:void(0)"></a>
-            </div>
-            <div class="main-slide main-slide4 fade">
-              <a href="javascript:void(0)"></a>
-            </div>
-            <div class="main-slide main-slide5 fade">
-              <a href="javascript:void(0)"></a>
-            </div>
-            <div class="main-slide main-slide6 fade">
-              <a href="javascript:void(0)"></a>
-            </div>
+              <div class="main-slide main-slide1">
+                <a href="javascript:void(0)"></a>
+              </div>
+              <div class="main-slide main-slide2">
+                <a href="javascript:void(0)"></a>
+              </div>
+              <div class="main-slide main-slide3">
+                <a href="javascript:void(0)"></a>
+              </div>
+              <div class="main-slide main-slide4 fade">
+                <a href="javascript:void(0)"></a>
+              </div>
+              <div class="main-slide main-slide5 fade">
+                <a href="javascript:void(0)"></a>
+              </div>
+              <div class="main-slide main-slide6 fade">
+                <a href="javascript:void(0)"></a>
+              </div>
             </Slider>
-
-            {/* <div class="dot-wrap">
-              <span class="dot" onClick="currentSlide(1)"></span>
-              <span class="dot" onClick="currentSlide(2)"></span>
-              <span class="dot" onClick="currentSlide(3)"></span>
-              <span class="dot" onClick="currentSlide(4)"></span>
-              <span class="dot" onClick="currentSlide(5)"></span>
-              <span class="dot" onClick="currentSlide(6)"></span>
-            </div> */}
           </div>
         </article>
-        <section>
+        <section className="myAroma">
           <h3>나만 알고 싶은 향기</h3>
           <div class="product-slide-wrap">
             <img src={titleImg} alt="나만 알고 싶은 향기" />
@@ -306,6 +324,7 @@ export default function Main() {
                   <span class="third">\ 32,000</span>
                 </a>
               </div>
+
               <div class="prod2">
                 <a href="javascript:void(0)">
                   <img
@@ -320,6 +339,7 @@ export default function Main() {
                   <span class="third">\ 20,000</span>
                 </a>
               </div>
+
               <div class="prod3">
                 <a href="javascript:void(0)">
                   <img
@@ -334,9 +354,145 @@ export default function Main() {
                   <span class="third">\ 17,000</span>
                 </a>
               </div>
-            </div>{" "}
+
+              <div class="prod4">
+                <a href="javascript:void(0)">
+                  <img
+                    src={dirtyBodySpary}
+                    alt="더티 보디 스프레이"
+                  />
+                  <br />
+                  <span class="first">더티 보디 스프레이</span>
+                  <br />
+                  <span class="second">#스테디셀러 #뒤돌아보는향 #재구매각</span>
+                  <br />
+                  <span class="third">\ 50,000</span>
+                </a>
+              </div>
+
+              <div class="prod5">
+                <a href="javascript:void(0)">
+                  <img
+                    src={daddyO}
+                    alt="대디-오"
+                  />
+                  <br />
+                  <span class="first">대디-오 100g/250g/500g</span>
+                  <br />
+                  <span class="second">#오래머무는잔향 #베스트샴푸</span>
+                  <br />
+                  <span class="third">\ 19,000</span>
+                </a>
+              </div>
+
+              <div class="prod6">
+                <a href="javascript:void(0)">
+                  <img
+                    src={newOO}
+                    alt="뉴"
+                  />
+                  <br />
+                  <span class="first">뉴</span>
+                  <br />
+                  <span class="second">#착한고체샴푸 #뿌리튼튼</span>
+                  <br />
+                  <span class="third">\ 18,000</span>
+                </a>
+              </div>
+
+              <div class="prod7">
+                <a href="javascript:void(0)">
+                  <img
+                    src={dontLookatme}
+                    alt="돈트 룩 앳 미"
+                  />
+                  <br />
+                  <span class="first">더 올리브 브랜치 100g/250g/500g</span>
+                  <br />
+                  <span class="second">#프레쉬마스크 #상큼한 레몬팩 #쌀알갱이</span>
+                  <br />
+                  <span class="third">\ 25,000</span>
+                </a>
+              </div>
+
+              <div class="prod8">
+                <a href="javascript:void(0)">
+                  <img
+                    src={seeVegi}
+                    alt="씨 베지터블"
+                  />
+                  <br />
+                  <span class="first">씨 베지터블</span>
+                  <br />
+                  <span class="second">#솝 #바다의청량함을그대로</span>
+                  <br />
+                  <span class="third">\ 10,000</span>
+                </a>
+              </div>
+
+              <div class="prod9">
+                <a href="javascript:void(0)">
+                  <img
+                    src={loveLove}
+                    alt="럽 럽 럽"
+                  />
+                  <br />
+                  <span class="first">럽 럽 럽 300g/600g</span>
+                  <br />
+                  <span class="second">#샤워스크럽 #구석구석소금롤링</span>
+                  <br />
+                  <span class="third">\ 30,000</span>
+                </a>
+              </div>
+
+              <div class="prod10">
+                <a href="javascript:void(0)">
+                  <img
+                    src={sexBom}
+                    alt="섹스 밤"
+                  />
+                  <br />
+                  <span class="first">섹스 밤</span>
+                  <br />
+                  <span class="second">#로맨틱 #섹시한밤 #일랑일랑꽃</span>
+                  <br />
+                  <span class="third">\ 12,000</span>
+                </a>
+              </div>
+
+              <div class="prod11">
+                <a href="javascript:void(0)">
+                  <img
+                    src={angelsOn}
+                    alt="엔젤스 온 배어 스킨"
+                  />
+                  <br />
+                  <span class="first">엔젤스 온 배어 스킨 100g/250g</span>
+                  <br />
+                  <span class="second">#클렌저 #산뜻한마무리 #스크럽도함께</span>
+                  <br />
+                  <span class="third">\ 22,000</span>
+                </a>
+              </div>
+
+              <div class="prod12">
+                <a href="javascript:void(0)">
+                  <img
+                    src={twilight}
+                    alt="트와일라잇"
+                  />
+                  <br />
+                  <span class="first">트와일라잇</span>
+                  <br />
+                  <span class="second">#보디스프레이 #차분한달콤함</span>
+                  <br />
+                  <span class="third">\ 50,000</span>
+                </a>
+              </div>
+
+            </div>
             {/* product-slide */}
-          </div>{" "}
+          </div>
           {/* product-slide-wrap */}
           <div class="product-slide-reviewwrap">
             <div class="review1">
@@ -344,32 +500,32 @@ export default function Main() {
                 <img src={bodySpary} alt="더티 보디 스프레이" />
               </a>
             </div>
-            <div class="hide review2">
+            <div class="review2">
               <a href="javascript:void(0)">
                 <img src={sleepBuble} alt="슬리피 버블바" />
               </a>
             </div>
-            <div class="hide review3">
+            <div class="review3">
               <a href="javascript:void(0)">
                 <img src={retroStective} alt="더 레트로 스텍티브" />
               </a>
             </div>
-            <div class="hide review4">
+            <div class="review4">
               <a href="javascript:void(0)">
                 <img src={theOliveBrench} alt="더 올리브 브랜치" />
               </a>
             </div>
-            <div class="hide review5">
+            <div class="review5">
               <a href="javascript:void(0)">
                 <img src={catastropyCosmetic} alt="카타스트로피 코스메틱" />
               </a>
             </div>
-            <div class="hide review6">
+            <div class="review6">
               <a href="javascript:void(0)">
                 <img src={maskOfMagnermint} alt="마스크 오브 매그너민트" />
               </a>
             </div>
-          </div>{" "}
+          </div>
           {/* product-slide-sidewrap */}
         </section>
         <section>
@@ -382,21 +538,21 @@ export default function Main() {
                   alt="마크 콘스탄틴과 함께하는 퍼퓸 이야기"
                 />
               </a>
-            </div>{" "}
+            </div>
             {/* info-wrap-left */}
             <div class="info-wrap-right">
               <div class="info-wrap-right-top">
                 <a href="javascript:void(0)">
                   <img src={saltScrub} alt="부드럽게 소금 롤링 스크럽" />
                 </a>
-              </div>{" "}
+              </div>
               {/* info-wrap-right-top */}
               <div class="info-wrap-right-bottom">
                 <div class="info-wrap-right-bottom-left">
                   <a href="javascript:void(0)">
                     <img src={summerIce} alt="EVENT 꽁꽁! 무더위를 얼리다" />
                   </a>
-                </div>{" "}
+                </div>
                 {/* info-wrap-right-bottom-left */}
                 <div class="info-wrap-right-bottom-right">
                   <a href="javascript:void(0)">
@@ -405,13 +561,13 @@ export default function Main() {
                       alt="코로나19 예방을 위한 매장 운영 안내"
                     />
                   </a>
-                </div>{" "}
+                </div>
                 {/* info-wrap-right-bottom-right */}
-              </div>{" "}
+              </div>
               {/* info-wrap-right-bottom */}
-            </div>{" "}
+            </div>
             {/* info-wrap-right */}
-          </div>{" "}
+          </div>
           {/* info-wrap */}
         </section>
         <section>
