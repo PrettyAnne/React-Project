@@ -425,9 +425,6 @@ h1,h2,h3,h4,h5 {
 
 /* 사이드 리뷰 슬라이더 */
 .product-slide-reviewwrap {
-  position: absolute;
-  top: 650px;
-  right: 50px;
 }
 
 .info-wrap img {

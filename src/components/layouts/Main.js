@@ -80,40 +80,6 @@ const MainWrapper = styled.div`
     background-color: #fff;
   }
 
-  .dot-wrap {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: block;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-  }
-
-  .slick-dots {
-    width: fit-content !important;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-  }
-
-  .slick-dots li {
-    display: block !important;
-  }
-
-  .dot {
-    display: block;
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 10px 0;
-    border: 2px solid #fff;
-    border-radius: 50%;
-  }
-
   /* Fading animation */
   .fade {
     -webkit-animation-name: fade;
@@ -166,7 +132,7 @@ const MainWrapper = styled.div`
   }
 
   .product-slide-wrap .product-slide {
-    display: flex;
+    display: block;
     padding: 0 30px;
   }
 
@@ -186,9 +152,6 @@ const MainWrapper = styled.div`
 
   /* 사이드 리뷰 슬라이더 */
   .product-slide-reviewwrap {
-    position: absolute;
-    top: -37px;
-    right: 0;
   }
 
   /* 안내배너 */
@@ -268,13 +231,57 @@ export default function Main() {
     slidesToShow: 1,
     slidesToScroll: 1,
     appendDots: dots => (
-      <div className="dot-wrap">
+      <div
+      style={{
+        position: "absolute",
+        top: "50%",
+        right: "20px",
+        width: "fit-content",
+        height: "fit-content",
+      }}>
         <ul> {dots} </ul>
       </div>
     ),
     customPaging: i => (
-      <div className="dot" style={{
+      <div style={{
+        width: "20px",
+        height: "20px",
+        borderRadius: "50%",
+        border: "2px solid #fff"
       }}
+      >
+      </div>
+    )
+  };
+
+  const settingsProduct = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    appendDots: dots => (
+      <div
+        style={{
+          position: "absolute",
+          bottom: "-50px",
+          left: "40%",
+          width: "fit-content",
+          padding: "10px"
+        }}
+      >
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
+    customPaging: i => (
+      <div
+        style={{
+          width: "10px",
+          height: "10px",
+          border: "1px solid #000",
+          borderRadius: "50%"
+        }}
       >
       </div>
     )
@@ -282,10 +289,34 @@ export default function Main() {
 
   const settingsReview = {
     dots: true,
+    arrows: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 1000,
+    autoplaySpeed: 2000,
+    appendDots: dots => (
+      <div
+        style={{
+          width: "fit-content",
+          height: "fit-content",
+        }}
+      >
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
+    customPaging: i => (
+      <div
+        style={{
+          width: "10px",
+          height: "10px",
+          border: "1px solid #000",
+          borderRadius: "50%"
+        }}
+      >
+      </div>
+    )
   };
 
   return (
@@ -321,7 +352,7 @@ export default function Main() {
           <div class="product-slide-wrap">
             <img src={titleImg} alt="나만 알고 싶은 향기" />
             <div class="product-slide">
-              <Slider {...settingsReview}>
+              <Slider {...settingsProduct}>
                 <div class="prod1">
                   <a href="./magic-crystal.html">
                     <img src={magicCrystals} alt="매직 크리스탈스 300g/600g" />
@@ -504,6 +535,7 @@ export default function Main() {
           </div>
           {/* product-slide-wrap */}
           <div class="product-slide-reviewwrap">
+            <Slider {...settingsReview}>
             <div class="review1">
               <a href="javascript:void(0)">
                 <img src={bodySpary} alt="더티 보디 스프레이" />
@@ -534,6 +566,7 @@ export default function Main() {
                 <img src={maskOfMagnermint} alt="마스크 오브 매그너민트" />
               </a>
             </div>
+            </Slider>
           </div>
           {/* product-slide-sidewrap */}
         </section>
