@@ -1,5 +1,14 @@
 import { useState } from "react";
 import styled from "styled-components";
+
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import headerLogo from '../../images/header-logo.png';
 import headerIconSearch from '../../images/header-icon-search.png';
 import btnTopsearchSearch from '../../images/btn_topsearch_search.png';
@@ -304,6 +313,7 @@ export default function Header() {
   const [isMyNavShow, setIsMyNavShow] = useState(false);
   
   return (
+    <Router>
     <HeaderWrapper>
       <header>
         <div class="header-wrap">
@@ -525,7 +535,7 @@ export default function Header() {
           </div> {/* header-icon */}
         </div> {/* header-wrap */}
       </header>
-
     </HeaderWrapper>
+    </Router>
   );
 }

@@ -5,8 +5,8 @@ import Main from "./layouts/Main";
 export default function Index() {
   return (
     <div>
-      <Header />   
-      <Main />   
+      <Header />
+      <Main />
       <Footer />
     </div>
   );

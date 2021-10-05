@@ -2,9 +2,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import styled from "styled-components";
+
 import titleImg from "../../images/content2-title.png";
 import consTantin from "../../images/content2-banner1.jpg";
-import styled from "styled-components";
 import saltScrub from "../../images/content2-banner2.gif";
 import summerIce from "../../images/content2-banner3.jpg";
 import covid from "../../images/content2-banner4.jpg";
@@ -78,32 +79,6 @@ const MainWrapper = styled.div`
   .bannerIcon li {
     display: block;
     margin-bottom: 10px;
-  }
-
-  /* Fading animation */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-
-  @-webkit-keyframes fade {
-    from {
-      opacity: 0.4;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fade {
-    from {
-      opacity: 0.4;
-    }
-    to {
-      opacity: 1;
-    }
   }
 
   /* 나만 알고싶은향기 wrap */

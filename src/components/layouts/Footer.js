@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 import footerLieaner from '../../images/footer-line.svg';
-
 import footerLogo from '../../images/footer-logo.png';
 import facebookLogo from '../../images/footer-icon-facebook.gif';
 import instagramLogo from '../../images/footer-icon-instagram.gif';
