@@ -75,9 +75,9 @@ const MainWrapper = styled.div`
     background: url(${slideBanner6}) no-repeat center top;
   }
 
-  .active,
-  .dot:hover {
-    background-color: #fff;
+  .bannerIcon li {
+    display: block;
+    margin-bottom: 10px;
   }
 
   /* Fading animation */
@@ -235,11 +235,12 @@ export default function Main() {
       style={{
         position: "absolute",
         top: "50%",
+        transform: "translateY(-50%)",
         right: "20px",
         width: "fit-content",
         height: "fit-content",
       }}>
-        <ul> {dots} </ul>
+        <ul className="bannerIcon"> {dots} </ul>
       </div>
     ),
     customPaging: i => (
