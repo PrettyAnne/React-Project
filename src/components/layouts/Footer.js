@@ -151,9 +151,9 @@ export default function Footer() {
     <FooterWrapper>
       <footer>
         <h5>러쉬 정보</h5>
-        <div class="footer-imgline" aria-label="여기서부터 푸터입니다."></div>
-        <div class="footer-wrap">
-          <div class="footer-left">
+        <div className="footer-imgline" aria-label="여기서부터 푸터입니다."></div>
+        <div className="footer-wrap">
+          <div className="footer-left">
             <h6 aria-label="러쉬로고">
               <a href="javascript:void(0)">
                 <img src={footerLogo} alt="러쉬로고" />
@@ -161,16 +161,16 @@ export default function Footer() {
             </h6>
 
             <strong>고객센터 1644-2357</strong>
-            <a href="mailto:webmaster@lush.co.kr" class="mail1">webmaster@lush.co.kr</a>
+            <a href="mailto:webmaster@lush.co.kr" className="mail1">webmaster@lush.co.kr</a>
             <p>
               상담전화 7/12~8/22<br />
               <span>유선응대 임시중단</span><br />
               상담톡 10:00~16:00(평일)
             </p>
             <i>기업선물 070-4713-8543</i>
-            <a href="mailto:order@lush.co.kr" class="mail2">order@lush.co.kr</a>
+            <a href="mailto:order@lush.co.kr" className="mail2">order@lush.co.kr</a>
 
-            <ul class="sns">
+            <ul className="sns">
               <li><a href="javascript:void(0)"><img src={facebookLogo} alt="페이스북" /></a></li>
               <li><a href="javascript:void(0)"><img src={instagramLogo} alt="인스타그램" /></a></li>
               <li><a href="javascript:void(0)"><img src={youtubeLogo} alt="유튜브" /></a></li>
@@ -179,7 +179,7 @@ export default function Footer() {
             </ul>
           </div> {/* footer-left */}
 
-          <div class="footer-right">
+          <div className="footer-right">
             <ul>
               <li><a href="javascript:void(0)">스카우트</a></li>
               <li><a href="javascript:void(0)">회사소개</a></li>
@@ -191,7 +191,7 @@ export default function Footer() {
 
             <form action="javascript:void(0)" method="">
               <label for="email"></label>
-              <input type="text" placeholder="이메일 주소를 입력해 주세요." id="email" class="email" />
+              <input type="text" placeholder="이메일 주소를 입력해 주세요." id="email" className="email" />
               <button type="button">구독하기</button>
             </form>
 

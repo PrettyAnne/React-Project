@@ -123,30 +123,30 @@ export default function Login() {
       <Header />
       <LoginWrapper>
         <main>
-          <div class="login-section">
+          <div className="login-section">
             <h3>로그인</h3>
-            <div class="member-select">
+            <div className="member-select">
               <a href="#">회원</a>
               <a href="#">비회원</a>
             </div>
-            <div class="member">
+            <div className="member">
               <form action="" method="POST">
-                <div class="id-box">
+                <div className="id-box">
                   <span><img src="./images/icon-id.png" alt="아이디" /></span>
                   <input type="text" placeholder="아이디" id="ID" />
                 </div>
-                <div class="pw-box">
+                <div className="pw-box">
                   <span><img src="./images/icon-password.png" alt="비밀번호" /></span>
                   <input type="password" placeholder="비밀번호" id="PW" />
                 </div>
-                <div class="id-memory-box">
+                <div className="id-memory-box">
                   <input type="checkbox" id="id-memory" />
                   <label for="id-memory">아이디 저장</label>
                 </div>
-                <button type="submit" class="login-btn">로그인</button>
+                <button type="submit" className="login-btn">로그인</button>
               </form>
 
-              <ul class="login-other">
+              <ul className="login-other">
                 <li><a href="#">회원가입</a></li>
                 <li><a href="#">아이디 찾기</a></li>
                 <li><a href="#">비밀번호 찾기</a></li>

@@ -1,9 +1,7 @@
 import { useState } from "react";
-import Login from '../../pages/Login';
 
 import styled from "styled-components";
 import React from "react";
-import { BrowserRouter, Route } from 'react-router-dom'
 
 import headerLogo from '../../images/header-logo.png';
 import headerIconSearch from '../../images/header-icon-search.png';
@@ -312,9 +310,9 @@ export default function Header() {
     <Router>
       <HeaderWrapper>
         <header>
-          <div class="header-wrap">
+          <div className="header-wrap">
             <h1>러쉬</h1>
-            <div class="header-logo">
+            <div className="header-logo">
               <a href="./index.html">
                 <img src={headerLogo} alt="러쉬" />
               </a>
@@ -322,14 +320,14 @@ export default function Header() {
 
             <nav>
               <h2>러쉬 메뉴</h2>
-              <div class="header-menu">
-                <ul class="gnb1step">
+              <div className="header-menu">
+                <ul className="gnb1step">
                   <li>
                     <a href="javascript:void(0)">제품</a>
-                    <ul class="gnb2step">
+                    <ul className="gnb2step">
                       <li>
                         <a href="javascript:void(0)">베스트</a>
-                        <ul class="gnb gnb2step-1">
+                        <ul className="gnb gnb2step-1">
                           <li><a href="javascript:void(0)">주간 베스트</a></li>
                           <li><a href="javascript:void(0)">별 다섯개 후기</a></li>
                           <li><a href="javascript:void(0)">온라인 전용</a></li>
@@ -340,7 +338,7 @@ export default function Header() {
                       </li>
                       <li>
                         <a href="javascript:void(0)">신제품</a>
-                        <ul class="gnb gnb2step-2">
+                        <ul className="gnb gnb2step-2">
                           <li><a href="javascript:void(0)">퍼퓸 디스커버리 기프트</a></li>
                           <li><a href="javascript:void(0)">버블 바 큐레이션</a></li>
                           <li><a href="javascript:void(0)">비건 메이크업</a></li>
@@ -350,7 +348,7 @@ export default function Header() {
                       </li>
                       <li>
                         <a href="javascript:void(0)">베쓰</a>
-                        <ul class="gnb gnb2step-3">
+                        <ul className="gnb gnb2step-3">
                           <li><a href="javascript:void(0)">배쓰 밤</a></li>
                           <li><a href="javascript:void(0)">버블 바</a></li>
                           <li><a href="javascript:void(0)">배쓰 오일</a></li>
@@ -359,7 +357,7 @@ export default function Header() {
                       </li>
                       <li>
                         <a href="javascript:void(0)">샤워</a>
-                        <ul class="gnb gnb2step-4">
+                        <ul className="gnb gnb2step-4">
                           <li><a href="javascript:void(0)">솝</a></li>
                           <li><a href="javascript:void(0)">샤워 젤&젤리</a></li>
                           <li><a href="javascript:void(0)">보디 컨디셔너</a></li>
@@ -371,7 +369,7 @@ export default function Header() {
                       </li>
                       <li>
                         <a href="javascript:void(0)">보디</a>
-                        <ul class="gnb gnb2step-5">
+                        <ul className="gnb gnb2step-5">
                           <li><a href="javascript:void(0)">클렌저</a></li>
                           <li><a href="javascript:void(0)">로션</a></li>
                           <li><a href="javascript:void(0)">핸드 앤 풋</a></li>
@@ -382,7 +380,7 @@ export default function Header() {
                       </li>
                       <li>
                         <a href="javascript:void(0)">페이스</a>
-                        <ul class="gnb gnb2step-6">
+                        <ul className="gnb gnb2step-6">
                           <li><a href="javascript:void(0)">클렌저</a></li>
                           <li><a href="javascript:void(0)">페이스 마스크</a></li>
                           <li><a href="javascript:void(0)">토너</a></li>
@@ -394,7 +392,7 @@ export default function Header() {
                       </li>
                       <li>
                         <a href="javascript:void(0)">헤어</a>
-                        <ul class="gnb gnb2step-7">
+                        <ul className="gnb gnb2step-7">
                           <li><a href="javascript:void(0)">샴푸 바</a></li>
                           <li><a href="javascript:void(0)">샴푸</a></li>
                           <li><a href="javascript:void(0)">컨디셔너</a></li>
@@ -404,7 +402,7 @@ export default function Header() {
                       </li>
                       <li>
                         <a href="javascript:void(0)">메이크업</a>
-                        <ul class="gnb gnb2step-8">
+                        <ul className="gnb gnb2step-8">
                           <li><a href="javascript:void(0)">페이스 파우더</a></li>
                           <li><a href="javascript:void(0)">아이 메이크업</a></li>
                           <li><a href="javascript:void(0)">립</a></li>
@@ -415,7 +413,7 @@ export default function Header() {
                       </li>
                       <li>
                         <a href="javascript:void(0)">퍼퓸</a>
-                        <ul class="gnb gnb2step-9">
+                        <ul className="gnb gnb2step-9">
                           <li><a href="javascript:void(0)">보디 스프레이</a></li>
                           <li><a href="javascript:void(0)">퍼퓸 라이브러리</a></li>
                           <li><a href="javascript:void(0)">코어 레인지</a></li>
@@ -427,7 +425,7 @@ export default function Header() {
                       </li>
                       <li>
                         <a href="javascript:void(0)">기프트</a>
-                        <ul class="gnb gnb2step-10">
+                        <ul className="gnb gnb2step-10">
                           <li><a href="javascript:void(0)">기프트 베스트</a></li>
                           <li><a href="javascript:void(0)">1-3만원대</a></li>
                           <li><a href="javascript:void(0)">4-6만원대</a></li>
@@ -440,7 +438,7 @@ export default function Header() {
                       </li>
                       <li>
                         <a href="javascript:void(0)">비건</a>
-                        <ul class="gnb gnb2step-1">
+                        <ul className="gnb gnb2step-1">
                           <li><a href="javascript:void(0)">배쓰</a></li>
                           <li><a href="javascript:void(0)">샤워</a></li>
                           <li><a href="javascript:void(0)">보디</a></li>
@@ -454,10 +452,10 @@ export default function Header() {
                   </li>
                   <li>
                     <a href="javascript:void(0)">러쉬 소개</a>
-                    <ul class="gnb3step">
+                    <ul className="gnb3step">
                       <li>
                         <a href="javascript:void(0)">러쉬 소개</a>
-                        <ul class="gnb3step-1">
+                        <ul className="gnb3step-1">
                           <li><a href="javascript:void(0)">러쉬 역사</a></li>
                           <li><a href="javascript:void(0)">이념과 가치</a></li>
                         </ul>
@@ -466,7 +464,7 @@ export default function Header() {
                       <li><a href="javascript:void(0)">채러티 팟</a></li>
                       <li>
                         <a href="javascript:void(0)">커뮤니티</a>
-                        <ul class="gnb3step-2">
+                        <ul className="gnb3step-2">
                           <li><a href="javascript:void(0)">젤러쉬</a></li>
                           <li><a href="javascript:void(0)">덕찌</a></li>
                         </ul>
@@ -482,17 +480,17 @@ export default function Header() {
               </div> {/* header-menu */}
 
             </nav>
-            <div class="header-icon">
-              <button type="button" class="sch" aria-label="검색" onClick={() => { setIsMyNavShow(true); }}>
+            <div className="header-icon">
+              <button type="button" className="sch" aria-label="검색" onClick={() => { setIsMyNavShow(true); }}>
                 <img src={headerIconSearch} alt="검색하기" />
               </button>
 
               {
 
-                isMyNavShow && (<div class="overlay" id="myNav">
-                  <button onClick={() => { setIsMyNavShow(false); }} class="closebtn">&times;</button>
+                isMyNavShow && (<div className="overlay" id="myNav">
+                  <button onClick={() => { setIsMyNavShow(false); }} className="closebtn">&times;</button>
 
-                  <div class="overlay-content">
+                  <div className="overlay-content">
                     <form action="javascript:void(0)" method="">
                       <label for="searchbox"></label>
                       <input type="text" id="searchbox" placeholder="혹시 더티 마니아인가요?" />
@@ -513,24 +511,21 @@ export default function Header() {
                 </div>)}
 
 
-              <a href="javascript:void(0)" class="cart" aria-label="장바구니">
+              <a href="javascript:void(0)" className="cart" aria-label="장바구니">
                 <img src={headerIconCart} alt="장바구니" />
               </a>
 
-              <BrowserRouter>
-                <button type="button" class="mpg" aria-label="마이페이지">
-                  <Route path="../../pages/Login.js" component={Login} />
-                  <img src={headerIconMypage} alt="마이페이지" />
-                  <div class="mpg-drop">
-                    <ul class="mpg-drop-inner">
-                      <li><a href="./login.html">로그인</a></li>
-                      <li><a href="javascript:void(0)">회원가입</a></li>
-                      <li><a href="javascript:void(0)">스카우트</a></li>
-                      <li><a href="javascript:void(0)">고객센터</a></li>
-                    </ul>
-                  </div>{/* mpg-drop */}
-                </button>
-              </BrowserRouter>
+              <button type="button" className="mpg" aria-label="마이페이지">
+                <img src={headerIconMypage} alt="마이페이지" />
+                <div className="mpg-drop">
+                  <ul className="mpg-drop-inner">
+                    <li><Link to="/Login">로그인</Link></li>
+                    <li><a href="javascript:void(0)">회원가입</a></li>
+                    <li><a href="javascript:void(0)">스카우트</a></li>
+                    <li><a href="javascript:void(0)">고객센터</a></li>
+                  </ul>
+                </div>{/* mpg-drop */}
+              </button>
             </div> {/* header-icon */}
           </div> {/* header-wrap */}
         </header>

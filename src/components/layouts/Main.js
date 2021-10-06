@@ -300,209 +300,209 @@ export default function Main() {
       <main>
         <article>
           <h3>메인 광고 배너</h3>
-          <div class="main-banner">
+          <div className="main-banner">
             <Slider {...settings}>
-              <div class="main-slide main-slide1">
+              <div className="main-slide main-slide1">
                 <a href="javascript:void(0)"></a>
               </div>
-              <div class="main-slide main-slide2">
+              <div className="main-slide main-slide2">
                 <a href="javascript:void(0)"></a>
               </div>
-              <div class="main-slide main-slide3">
+              <div className="main-slide main-slide3">
                 <a href="javascript:void(0)"></a>
               </div>
-              <div class="main-slide main-slide4 fade">
+              <div className="main-slide main-slide4 fade">
                 <a href="javascript:void(0)"></a>
               </div>
-              <div class="main-slide main-slide5 fade">
+              <div className="main-slide main-slide5 fade">
                 <a href="javascript:void(0)"></a>
               </div>
-              <div class="main-slide main-slide6 fade">
+              <div className="main-slide main-slide6 fade">
                 <a href="javascript:void(0)"></a>
               </div>
             </Slider>
           </div>
         </article>
-        <section className="myAroma">
+        <section classNameName="myAroma">
           <h3>나만 알고 싶은 향기</h3>
-          <div class="product-slide-wrap">
+          <div className="product-slide-wrap">
             <img src={titleImg} alt="나만 알고 싶은 향기" />
-            <div class="product-slide">
+            <div className="product-slide">
               <Slider {...settingsProduct}>
-                <div class="prod1">
+                <div className="prod1">
                   <a href="./magic-crystal.html">
                     <img src={magicCrystals} alt="매직 크리스탈스 300g/600g" />
                     <br />
-                    <span class="first">매직 크리스탈스 300g/600g</span>
+                    <span className="first">매직 크리스탈스 300g/600g</span>
                     <br />
-                    <span class="second">#스크럽 #민트의마법 #시원해져라</span>
+                    <span className="second">#스크럽 #민트의마법 #시원해져라</span>
                     <br />
-                    <span class="third">\ 32,000</span>
+                    <span className="third">\ 32,000</span>
                   </a>
                 </div>
 
-                <div class="prod2">
+                <div className="prod2">
                   <a href="javascript:void(0)">
                     <img
                       src={magnerMint}
                       alt="마스크 오브 매그너민트 125g/315g"
                     />
                     <br />
-                    <span class="first">마스크 오브 매그너민트 125g/315g</span>
+                    <span className="first">마스크 오브 매그너민트 125g/315g</span>
                     <br />
-                    <span class="second">#꿀의촉촉함 #데일리백 #민트팩</span>
+                    <span className="second">#꿀의촉촉함 #데일리백 #민트팩</span>
                     <br />
-                    <span class="third">\ 20,000</span>
+                    <span className="third">\ 20,000</span>
                   </a>
                 </div>
 
-                <div class="prod3">
+                <div className="prod3">
                   <a href="javascript:void(0)">
                     <img
                       src={oliveBrench}
                       alt="더 올리브 브랜치 100g/250g/500g"
                     />
                     <br />
-                    <span class="first">더 올리브 브랜치 100g/250g/500g</span>
+                    <span className="first">더 올리브 브랜치 100g/250g/500g</span>
                     <br />
-                    <span class="second">#오일듬뿍샤워젤 #보습샤워시작</span>
+                    <span className="second">#오일듬뿍샤워젤 #보습샤워시작</span>
                     <br />
-                    <span class="third">\ 17,000</span>
+                    <span className="third">\ 17,000</span>
                   </a>
                 </div>
 
-                <div class="prod4">
+                <div className="prod4">
                   <a href="javascript:void(0)">
                     <img
                       src={dirtyBodySpary}
                       alt="더티 보디 스프레이"
                     />
                     <br />
-                    <span class="first">더티 보디 스프레이</span>
+                    <span className="first">더티 보디 스프레이</span>
                     <br />
-                    <span class="second">#스테디셀러 #뒤돌아보는향 #재구매각</span>
+                    <span className="second">#스테디셀러 #뒤돌아보는향 #재구매각</span>
                     <br />
-                    <span class="third">\ 50,000</span>
+                    <span className="third">\ 50,000</span>
                   </a>
                 </div>
 
-                <div class="prod5">
+                <div className="prod5">
                   <a href="javascript:void(0)">
                     <img
                       src={daddyO}
                       alt="대디-오"
                     />
                     <br />
-                    <span class="first">대디-오 100g/250g/500g</span>
+                    <span className="first">대디-오 100g/250g/500g</span>
                     <br />
-                    <span class="second">#오래머무는잔향 #베스트샴푸</span>
+                    <span className="second">#오래머무는잔향 #베스트샴푸</span>
                     <br />
-                    <span class="third">\ 19,000</span>
+                    <span className="third">\ 19,000</span>
                   </a>
                 </div>
 
-                <div class="prod6">
+                <div className="prod6">
                   <a href="javascript:void(0)">
                     <img
                       src={newOO}
                       alt="뉴"
                     />
                     <br />
-                    <span class="first">뉴</span>
+                    <span className="first">뉴</span>
                     <br />
-                    <span class="second">#착한고체샴푸 #뿌리튼튼</span>
+                    <span className="second">#착한고체샴푸 #뿌리튼튼</span>
                     <br />
-                    <span class="third">\ 18,000</span>
+                    <span className="third">\ 18,000</span>
                   </a>
                 </div>
 
-                <div class="prod7">
+                <div className="prod7">
                   <a href="javascript:void(0)">
                     <img
                       src={dontLookatme}
                       alt="돈트 룩 앳 미"
                     />
                     <br />
-                    <span class="first">더 올리브 브랜치 100g/250g/500g</span>
+                    <span className="first">더 올리브 브랜치 100g/250g/500g</span>
                     <br />
-                    <span class="second">#프레쉬마스크 #상큼한 레몬팩 #쌀알갱이</span>
+                    <span className="second">#프레쉬마스크 #상큼한 레몬팩 #쌀알갱이</span>
                     <br />
-                    <span class="third">\ 25,000</span>
+                    <span className="third">\ 25,000</span>
                   </a>
                 </div>
 
-                <div class="prod8">
+                <div className="prod8">
                   <a href="javascript:void(0)">
                     <img
                       src={seeVegi}
                       alt="씨 베지터블"
                     />
                     <br />
-                    <span class="first">씨 베지터블</span>
+                    <span className="first">씨 베지터블</span>
                     <br />
-                    <span class="second">#솝 #바다의청량함을그대로</span>
+                    <span className="second">#솝 #바다의청량함을그대로</span>
                     <br />
-                    <span class="third">\ 10,000</span>
+                    <span className="third">\ 10,000</span>
                   </a>
                 </div>
 
-                <div class="prod9">
+                <div className="prod9">
                   <a href="javascript:void(0)">
                     <img
                       src={loveLove}
                       alt="럽 럽 럽"
                     />
                     <br />
-                    <span class="first">럽 럽 럽 300g/600g</span>
+                    <span className="first">럽 럽 럽 300g/600g</span>
                     <br />
-                    <span class="second">#샤워스크럽 #구석구석소금롤링</span>
+                    <span className="second">#샤워스크럽 #구석구석소금롤링</span>
                     <br />
-                    <span class="third">\ 30,000</span>
+                    <span className="third">\ 30,000</span>
                   </a>
                 </div>
 
-                <div class="prod10">
+                <div className="prod10">
                   <a href="javascript:void(0)">
                     <img
                       src={sexBom}
                       alt="섹스 밤"
                     />
                     <br />
-                    <span class="first">섹스 밤</span>
+                    <span className="first">섹스 밤</span>
                     <br />
-                    <span class="second">#로맨틱 #섹시한밤 #일랑일랑꽃</span>
+                    <span className="second">#로맨틱 #섹시한밤 #일랑일랑꽃</span>
                     <br />
-                    <span class="third">\ 12,000</span>
+                    <span className="third">\ 12,000</span>
                   </a>
                 </div>
 
-                <div class="prod11">
+                <div className="prod11">
                   <a href="javascript:void(0)">
                     <img
                       src={angelsOn}
                       alt="엔젤스 온 배어 스킨"
                     />
                     <br />
-                    <span class="first">엔젤스 온 배어 스킨 100g/250g</span>
+                    <span className="first">엔젤스 온 배어 스킨 100g/250g</span>
                     <br />
-                    <span class="second">#클렌저 #산뜻한마무리 #스크럽도함께</span>
+                    <span className="second">#클렌저 #산뜻한마무리 #스크럽도함께</span>
                     <br />
-                    <span class="third">\ 22,000</span>
+                    <span className="third">\ 22,000</span>
                   </a>
                 </div>
 
-                <div class="prod12">
+                <div className="prod12">
                   <a href="javascript:void(0)">
                     <img
                       src={twilight}
                       alt="트와일라잇"
                     />
                     <br />
-                    <span class="first">트와일라잇</span>
+                    <span className="first">트와일라잇</span>
                     <br />
-                    <span class="second">#보디스프레이 #차분한달콤함</span>
+                    <span className="second">#보디스프레이 #차분한달콤함</span>
                     <br />
-                    <span class="third">\ 50,000</span>
+                    <span className="third">\ 50,000</span>
                   </a>
                 </div>
               </Slider>
@@ -510,34 +510,34 @@ export default function Main() {
             {/* product-slide */}
           </div>
           {/* product-slide-wrap */}
-          <div class="product-slide-reviewwrap">
+          <div className="product-slide-reviewwrap">
             <Slider {...settingsReview}>
-            <div class="review1">
+            <div className="review1">
               <a href="javascript:void(0)">
                 <img src={bodySpary} alt="더티 보디 스프레이" />
               </a>
             </div>
-            <div class="review2">
+            <div className="review2">
               <a href="javascript:void(0)">
                 <img src={sleepBuble} alt="슬리피 버블바" />
               </a>
             </div>
-            <div class="review3">
+            <div className="review3">
               <a href="javascript:void(0)">
                 <img src={retroStective} alt="더 레트로 스텍티브" />
               </a>
             </div>
-            <div class="review4">
+            <div className="review4">
               <a href="javascript:void(0)">
                 <img src={theOliveBrench} alt="더 올리브 브랜치" />
               </a>
             </div>
-            <div class="review5">
+            <div className="review5">
               <a href="javascript:void(0)">
                 <img src={catastropyCosmetic} alt="카타스트로피 코스메틱" />
               </a>
             </div>
-            <div class="review6">
+            <div className="review6">
               <a href="javascript:void(0)">
                 <img src={maskOfMagnermint} alt="마스크 오브 매그너민트" />
               </a>
@@ -548,8 +548,8 @@ export default function Main() {
         </section>
         <section>
           <h4>소식, 제품소개, 이벤트, 공지사항</h4>
-          <div class="info-wrap">
-            <div class="info-wrap-left">
+          <div className="info-wrap">
+            <div className="info-wrap-left">
               <a href="javascript:void(0)">
                 <img
                   src={consTantin}
@@ -558,21 +558,21 @@ export default function Main() {
               </a>
             </div>
             {/* info-wrap-left */}
-            <div class="info-wrap-right">
-              <div class="info-wrap-right-top">
+            <div className="info-wrap-right">
+              <div className="info-wrap-right-top">
                 <a href="javascript:void(0)">
                   <img src={saltScrub} alt="부드럽게 소금 롤링 스크럽" />
                 </a>
               </div>
               {/* info-wrap-right-top */}
-              <div class="info-wrap-right-bottom">
-                <div class="info-wrap-right-bottom-left">
+              <div className="info-wrap-right-bottom">
+                <div className="info-wrap-right-bottom-left">
                   <a href="javascript:void(0)">
                     <img src={summerIce} alt="EVENT 꽁꽁! 무더위를 얼리다" />
                   </a>
                 </div>
                 {/* info-wrap-right-bottom-left */}
-                <div class="info-wrap-right-bottom-right">
+                <div className="info-wrap-right-bottom-right">
                   <a href="javascript:void(0)">
                     <img
                       src={covid}
@@ -590,8 +590,8 @@ export default function Main() {
         </section>
         <section>
           <h4>신제품 광고</h4>
-          <div class="newprod-adv-wrap">
-            <div class="newprod-adv-text">
+          <div className="newprod-adv-wrap">
+            <div className="newprod-adv-text">
               <strong>
                 NEW 탱글드 헤어 <br />
                 트리트 먼트
