@@ -130,7 +130,7 @@ export default function Login() {
               <a href="#">비회원</a>
             </div>
             <div className="member">
-              <form action="" method="POST">
+              <form action="#" method="POST">
                 <div className="id-box">
                   <span><img src="./images/icon-id.png" alt="아이디" /></span>
                   <input type="text" placeholder="아이디" id="ID" />

@@ -189,7 +189,7 @@ export default function Footer() {
               <li><a href="javascript:void(0)">고객센터</a></li>
             </ul>
 
-            <form action="javascript:void(0)" method="">
+            <form action="#" method="GET">
               <label for="email"></label>
               <input type="text" placeholder="이메일 주소를 입력해 주세요." id="email" className="email" />
               <button type="button">구독하기</button>

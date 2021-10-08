@@ -491,7 +491,7 @@ export default function Header() {
                   <button onClick={() => { setIsMyNavShow(false); }} className="closebtn">&times;</button>
 
                   <div className="overlay-content">
-                    <form action="javascript:void(0)" method="">
+                    <form action="#" method="GET">
                       <label for="searchbox"></label>
                       <input type="text" id="searchbox" placeholder="혹시 더티 마니아인가요?" />
                       <label for="searchbtn"></label>
