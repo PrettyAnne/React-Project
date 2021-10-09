@@ -3,14 +3,14 @@ import Footer from "./layouts/Footer";
 import Main from "./layouts/Main";
 import Login from "../pages/Login";
 
-import { Route, Switch } from "react-router";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export default function Index() {
   return (
-    <div>
+    <Router>
       <Header />
       <Switch>
-        <Route path="/Main">
+        <Route exact path="/">
           <Main />
         </Route>
         <Route path="/Login">
@@ -18,6 +18,6 @@ export default function Index() {
         </Route>
       </Switch>
       <Footer />
-    </div>
+    </Router>
   );
 }

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "1",
+    "name": "매직 크리스탈스 300g/600g",
+    "tag": "#스크럽 #민트의마법 #시원해져라",
+    "price": 32000,
+    "thumbUrl":
+      "https://lush.co.kr/data/goods/18/11/48/1000000026/1000000026_main_03.jpg",
+    "url": "/product/1"
+  },
+  {
+    "id": "2",
+    "name": "마스크 오브 매그너민트 125g/315g",
+    "tag": "#꿀의촉촉함 #데일리백 #민트팩",
+    "price": 20000,
+    "thumbUrl": "https://lush.co.kr/data/goods/18/11/48/1000000026/1000000026_main_03.jpg",
+    "url": "/product/2"
+  }
+]

@@ -2,6 +2,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { Link } from 'react-router-dom';
+
 import styled from "styled-components";
 
 import titleImg from "../../images/content2-title.png";
@@ -36,6 +38,7 @@ import loveLove from "../../images/content1-slide1-9.png";
 import sexBom from "../../images/content1-slide1-10.jpg";
 import angelsOn from "../../images/content1-slide1-11.jpg";
 import twilight from "../../images/content1-slide1-12.jpg";
+import { useEffect, useState } from "react";
 
 const MainWrapper = styled.div`
   /* 메인 배너 */
@@ -81,20 +84,25 @@ const MainWrapper = styled.div`
     margin-bottom: 10px;
   }
 
+  .main-banner .slick-active div {
+    background-color: #fff;
+  }
+
   /* 나만 알고싶은향기 wrap */
   .myAroma {
     position: relative;
   }
 
   .myAroma::after {
-    content: '';
+    content: "";
     display: block;
     clear: both;
   }
 
   /* 제품 슬라이더 */
   .product-slide-wrap {
-    min-width: 1280px;
+    width: 1000px;
+    min-width: 1000px;
     padding: 80px 0 120px;
   }
 
@@ -125,8 +133,20 @@ const MainWrapper = styled.div`
     font-weight: bold;
   }
 
+  .product-slide-wrap .product-slide .slick-dots .slick-active div {
+    background-color: #000;
+  }
+
   /* 사이드 리뷰 슬라이더 */
   .product-slide-reviewwrap {
+    width: 300px;
+    position: absolute;
+    top: 642px;
+    right: 0;
+  }
+
+  .product-slide-reviewwrap .slick-dots .slick-active div {
+    background-color: #000;
   }
 
   /* 안내배너 */
@@ -205,29 +225,30 @@ export default function Main() {
     speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    appendDots: dots => (
+    appendDots: (dots) => (
       <div
-      style={{
-        position: "absolute",
-        top: "50%",
-        transform: "translateY(-50%)",
-        right: "20px",
-        width: "fit-content",
-        height: "fit-content",
-      }}>
+        style={{
+          position: "absolute",
+          top: "50%",
+          transform: "translateY(-50%)",
+          right: "20px",
+          width: "fit-content",
+          height: "fit-content",
+        }}
+      >
         <ul className="bannerIcon"> {dots} </ul>
       </div>
     ),
-    customPaging: i => (
-      <div style={{
-        width: "20px",
-        height: "20px",
-        borderRadius: "50%",
-        border: "2px solid #fff"
-      }}
-      >
-      </div>
-    )
+    customPaging: (i) => (
+      <div
+        style={{
+          width: "20px",
+          height: "20px",
+          borderRadius: "50%",
+          border: "2px solid #fff",
+        }}
+      ></div>
+    ),
   };
 
   const settingsProduct = {
@@ -237,30 +258,29 @@ export default function Main() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    appendDots: dots => (
+    appendDots: (dots) => (
       <div
         style={{
           position: "absolute",
           bottom: "-50px",
           left: "40%",
           width: "fit-content",
-          padding: "10px"
+          padding: "10px",
         }}
       >
         <ul style={{ margin: "0px" }}> {dots} </ul>
       </div>
     ),
-    customPaging: i => (
+    customPaging: (i) => (
       <div
         style={{
           width: "10px",
           height: "10px",
           border: "1px solid #000",
-          borderRadius: "50%"
+          borderRadius: "50%",
         }}
-      >
-      </div>
-    )
+      ></div>
+    ),
   };
 
   const settingsReview = {
@@ -272,28 +292,33 @@ export default function Main() {
     slidesToScroll: 1,
     speed: 1000,
     autoplaySpeed: 2000,
-    appendDots: dots => (
-      <div
-        style={{
-          width: "fit-content",
-          height: "fit-content",
-        }}
-      >
+    appendDots: (dots) => (
+      <div style={{}}>
         <ul style={{ margin: "0px" }}> {dots} </ul>
       </div>
     ),
-    customPaging: i => (
+    customPaging: (i) => (
       <div
         style={{
           width: "10px",
           height: "10px",
           border: "1px solid #000",
-          borderRadius: "50%"
+          borderRadius: "50%",
         }}
-      >
-      </div>
-    )
+      ></div>
+    ),
   };
+
+  const [slideProducts, setSlideProducts] = useState([]);
+  useEffect(function(){
+    fetch('http://localhost:3000/json/slideProducts.json').then(function(res){
+      res.json().then(function(json) {
+        setSlideProducts(json);
+      }).catch(function(e) {
+        console.log(e);
+      });
+    });
+  },[]);
 
   return (
     <MainWrapper>
@@ -329,33 +354,23 @@ export default function Main() {
             <img src={titleImg} alt="나만 알고 싶은 향기" />
             <div className="product-slide">
               <Slider {...settingsProduct}>
-                <div className="prod1">
-                  <a href="./magic-crystal.html">
-                    <img src={magicCrystals} alt="매직 크리스탈스 300g/600g" />
-                    <br />
-                    <span className="first">매직 크리스탈스 300g/600g</span>
-                    <br />
-                    <span className="second">#스크럽 #민트의마법 #시원해져라</span>
-                    <br />
-                    <span className="third">\ 32,000</span>
-                  </a>
-                </div>
+                {slideProducts.map(function (data) {
+                  return (
+                    <div>
+                      <Link to={data.url}>
+                        <img src={data.thumbUrl} alt={data.name} />
+                        <br />
+                        <span className="first">{data.name}</span>
+                        <br />
+                        <span className="second">{data.tag}</span>
+                        <br />
+                        <span className="third">\ {data.price.toLocaleString()}</span>
+                      </Link>
+                    </div>
+                  );
+                })}
 
-                <div className="prod2">
-                  <a href="javascript:void(0)">
-                    <img
-                      src={magnerMint}
-                      alt="마스크 오브 매그너민트 125g/315g"
-                    />
-                    <br />
-                    <span className="first">마스크 오브 매그너민트 125g/315g</span>
-                    <br />
-                    <span className="second">#꿀의촉촉함 #데일리백 #민트팩</span>
-                    <br />
-                    <span className="third">\ 20,000</span>
-                  </a>
-                </div>
-
+                
                 <div className="prod3">
                   <a href="javascript:void(0)">
                     <img
@@ -363,9 +378,13 @@ export default function Main() {
                       alt="더 올리브 브랜치 100g/250g/500g"
                     />
                     <br />
-                    <span className="first">더 올리브 브랜치 100g/250g/500g</span>
+                    <span className="first">
+                      더 올리브 브랜치 100g/250g/500g
+                    </span>
                     <br />
-                    <span className="second">#오일듬뿍샤워젤 #보습샤워시작</span>
+                    <span className="second">
+                      #오일듬뿍샤워젤 #보습샤워시작
+                    </span>
                     <br />
                     <span className="third">\ 17,000</span>
                   </a>
@@ -373,14 +392,13 @@ export default function Main() {
 
                 <div className="prod4">
                   <a href="javascript:void(0)">
-                    <img
-                      src={dirtyBodySpary}
-                      alt="더티 보디 스프레이"
-                    />
+                    <img src={dirtyBodySpary} alt="더티 보디 스프레이" />
                     <br />
                     <span className="first">더티 보디 스프레이</span>
                     <br />
-                    <span className="second">#스테디셀러 #뒤돌아보는향 #재구매각</span>
+                    <span className="second">
+                      #스테디셀러 #뒤돌아보는향 #재구매각
+                    </span>
                     <br />
                     <span className="third">\ 50,000</span>
                   </a>
@@ -388,10 +406,7 @@ export default function Main() {
 
                 <div className="prod5">
                   <a href="javascript:void(0)">
-                    <img
-                      src={daddyO}
-                      alt="대디-오"
-                    />
+                    <img src={daddyO} alt="대디-오" />
                     <br />
                     <span className="first">대디-오 100g/250g/500g</span>
                     <br />
@@ -403,10 +418,7 @@ export default function Main() {
 
                 <div className="prod6">
                   <a href="javascript:void(0)">
-                    <img
-                      src={newOO}
-                      alt="뉴"
-                    />
+                    <img src={newOO} alt="뉴" />
                     <br />
                     <span className="first">뉴</span>
                     <br />
@@ -418,14 +430,15 @@ export default function Main() {
 
                 <div className="prod7">
                   <a href="javascript:void(0)">
-                    <img
-                      src={dontLookatme}
-                      alt="돈트 룩 앳 미"
-                    />
+                    <img src={dontLookatme} alt="돈트 룩 앳 미" />
                     <br />
-                    <span className="first">더 올리브 브랜치 100g/250g/500g</span>
+                    <span className="first">
+                      더 올리브 브랜치 100g/250g/500g
+                    </span>
                     <br />
-                    <span className="second">#프레쉬마스크 #상큼한 레몬팩 #쌀알갱이</span>
+                    <span className="second">
+                      #프레쉬마스크 #상큼한 레몬팩 #쌀알갱이
+                    </span>
                     <br />
                     <span className="third">\ 25,000</span>
                   </a>
@@ -433,10 +446,7 @@ export default function Main() {
 
                 <div className="prod8">
                   <a href="javascript:void(0)">
-                    <img
-                      src={seeVegi}
-                      alt="씨 베지터블"
-                    />
+                    <img src={seeVegi} alt="씨 베지터블" />
                     <br />
                     <span className="first">씨 베지터블</span>
                     <br />
@@ -448,14 +458,13 @@ export default function Main() {
 
                 <div className="prod9">
                   <a href="javascript:void(0)">
-                    <img
-                      src={loveLove}
-                      alt="럽 럽 럽"
-                    />
+                    <img src={loveLove} alt="럽 럽 럽" />
                     <br />
                     <span className="first">럽 럽 럽 300g/600g</span>
                     <br />
-                    <span className="second">#샤워스크럽 #구석구석소금롤링</span>
+                    <span className="second">
+                      #샤워스크럽 #구석구석소금롤링
+                    </span>
                     <br />
                     <span className="third">\ 30,000</span>
                   </a>
@@ -463,14 +472,13 @@ export default function Main() {
 
                 <div className="prod10">
                   <a href="javascript:void(0)">
-                    <img
-                      src={sexBom}
-                      alt="섹스 밤"
-                    />
+                    <img src={sexBom} alt="섹스 밤" />
                     <br />
                     <span className="first">섹스 밤</span>
                     <br />
-                    <span className="second">#로맨틱 #섹시한밤 #일랑일랑꽃</span>
+                    <span className="second">
+                      #로맨틱 #섹시한밤 #일랑일랑꽃
+                    </span>
                     <br />
                     <span className="third">\ 12,000</span>
                   </a>
@@ -478,14 +486,13 @@ export default function Main() {
 
                 <div className="prod11">
                   <a href="javascript:void(0)">
-                    <img
-                      src={angelsOn}
-                      alt="엔젤스 온 배어 스킨"
-                    />
+                    <img src={angelsOn} alt="엔젤스 온 배어 스킨" />
                     <br />
                     <span className="first">엔젤스 온 배어 스킨 100g/250g</span>
                     <br />
-                    <span className="second">#클렌저 #산뜻한마무리 #스크럽도함께</span>
+                    <span className="second">
+                      #클렌저 #산뜻한마무리 #스크럽도함께
+                    </span>
                     <br />
                     <span className="third">\ 22,000</span>
                   </a>
@@ -493,10 +500,7 @@ export default function Main() {
 
                 <div className="prod12">
                   <a href="javascript:void(0)">
-                    <img
-                      src={twilight}
-                      alt="트와일라잇"
-                    />
+                    <img src={twilight} alt="트와일라잇" />
                     <br />
                     <span className="first">트와일라잇</span>
                     <br />
@@ -512,36 +516,36 @@ export default function Main() {
           {/* product-slide-wrap */}
           <div className="product-slide-reviewwrap">
             <Slider {...settingsReview}>
-            <div className="review1">
-              <a href="javascript:void(0)">
-                <img src={bodySpary} alt="더티 보디 스프레이" />
-              </a>
-            </div>
-            <div className="review2">
-              <a href="javascript:void(0)">
-                <img src={sleepBuble} alt="슬리피 버블바" />
-              </a>
-            </div>
-            <div className="review3">
-              <a href="javascript:void(0)">
-                <img src={retroStective} alt="더 레트로 스텍티브" />
-              </a>
-            </div>
-            <div className="review4">
-              <a href="javascript:void(0)">
-                <img src={theOliveBrench} alt="더 올리브 브랜치" />
-              </a>
-            </div>
-            <div className="review5">
-              <a href="javascript:void(0)">
-                <img src={catastropyCosmetic} alt="카타스트로피 코스메틱" />
-              </a>
-            </div>
-            <div className="review6">
-              <a href="javascript:void(0)">
-                <img src={maskOfMagnermint} alt="마스크 오브 매그너민트" />
-              </a>
-            </div>
+              <div className="review1">
+                <a href="javascript:void(0)">
+                  <img src={bodySpary} alt="더티 보디 스프레이" />
+                </a>
+              </div>
+              <div className="review2">
+                <a href="javascript:void(0)">
+                  <img src={sleepBuble} alt="슬리피 버블바" />
+                </a>
+              </div>
+              <div className="review3">
+                <a href="javascript:void(0)">
+                  <img src={retroStective} alt="더 레트로 스텍티브" />
+                </a>
+              </div>
+              <div className="review4">
+                <a href="javascript:void(0)">
+                  <img src={theOliveBrench} alt="더 올리브 브랜치" />
+                </a>
+              </div>
+              <div className="review5">
+                <a href="javascript:void(0)">
+                  <img src={catastropyCosmetic} alt="카타스트로피 코스메틱" />
+                </a>
+              </div>
+              <div className="review6">
+                <a href="javascript:void(0)">
+                  <img src={maskOfMagnermint} alt="마스크 오브 매그너민트" />
+                </a>
+              </div>
             </Slider>
           </div>
           {/* product-slide-sidewrap */}

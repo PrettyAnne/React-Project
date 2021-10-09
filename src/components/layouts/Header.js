@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import styled from "styled-components";
 import React from "react";
+import { Link } from 'react-router-dom';
 
 import headerLogo from '../../images/header-logo.png';
 import headerIconSearch from '../../images/header-icon-search.png';
@@ -307,15 +308,14 @@ export default function Header() {
   const [isMyNavShow, setIsMyNavShow] = useState(false);
 
   return (
-    <Router>
       <HeaderWrapper>
         <header>
           <div className="header-wrap">
             <h1>러쉬</h1>
             <div className="header-logo">
-              <a href="./index.html">
+              <Link to="/">
                 <img src={headerLogo} alt="러쉬" />
-              </a>
+              </Link>
             </div> {/* header-logo */}
 
             <nav>
@@ -530,6 +530,5 @@ export default function Header() {
           </div> {/* header-wrap */}
         </header>
       </HeaderWrapper>
-    </Router>
   );
 }
