@@ -1,7 +1,31 @@
-import Header from "../components/layouts/Header";
-import Footer from "../components/layouts/Footer";
-
 import styled from "styled-components";
+
+import productImgFirst from "../images/magic-crystal-img1.jpg";
+import productImgSecond from "../images/magic-crystal-img2.jpg";
+import productImgThird from "../images/magic-crystal-img3.jpg";
+import selectArrow from "../images/icon-step.png";
+import share from "../images/icon_share.png";
+import zzim from "../images/icon-zzim.png";
+import magiccrystalVideo from "../images/magic-crystal-video.jpg";
+import mainFirst from "../images/magic-crystal-main1.jpg";
+import mainSecond from "../images/magic-crystal-main2.jpg";
+import mainThird from "../images/magic-crystal-main3.jpg";
+import mainFourth from "../images/magic-crystal-main4.jpg";
+import mainFifth from "../images/magic-crystal-main5.jpg";
+import mainSix from "../images/magic-crystal-main6.jpg";
+import mainSalt from "../images/magic-crystal-main-salt.jpg";
+import mainPeppermintOil from "../images/magic-crystal-main-peppermint.jpg";
+import mainAnise from "../images/magic-crystal-main-anise.jpg";
+import packingFirst from "../images/main-packing-check01.png";
+import packingSecond from "../images/main-packing-check02.png";
+import otherFirst from "../images/magic-crystal-other1.jpg";
+import otherSecond from "../images/magic-crystal-other2.jpg";
+import iconVegan from "../images/icon_vegan.png";
+import iconFresh from "../images/icon_fresh.png";
+
+import iconSpecialVegan from "../images/icon-special-vegan.png";
+import iconSpecialSp from "../images/icon-special-sp.png";
+import iconCamera from "../images/icon_camera.png";
 
 const MagicCrystalsWrapper = styled.div`
 /* 매직크리스탈스 메인 */
@@ -320,7 +344,7 @@ section h4 {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background-image: url(../images/icon-special-vegan.png);
+  background-image: url(${iconSpecialVegan});
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -330,7 +354,7 @@ section h4 {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background-image: url(../images/icon-special-sp.png);
+  background-image: url(${iconSpecialSp});
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -699,7 +723,7 @@ section h4 {
 }
 
 .complete .camera {
-  background-image: url(../images/icon_camera.png);
+  background-image: url(${iconCamera});
   background-repeat: no-repeat;
 }
 
@@ -771,34 +795,33 @@ section h4 {
   padding: 15px 15px;
   border: 1px solid #dbdbdb;
 }
-`
+`;
 
 export default function MagicCrystals() {
   return (
     <MagicCrystalsWrapper>
-      <Header />
       <main>
         <div class="product-intro-wrap">
           <div class="intro-left">
             <div class="slide-img1">
-              <img src="./images/magic-crystal-img1.jpg" alt="매직 크리스탈스" />
+              <img src={productImgFirst} alt="매직 크리스탈스" />
             </div>
             <div class="slide-img2">
-              <img src="./images/magic-crystal-img2.jpg" alt="매직 크리스탈스" />
+              <img src={productImgSecond} alt="매직 크리스탈스" />
             </div>
             <div class="slide-img3">
-              <img src="./images/magic-crystal-img3.jpg" alt="매직 크리스탈스" />
+              <img src={productImgThird} alt="매직 크리스탈스" />
             </div>
           </div>{/* intro-left */}
           <div class="intro-right">
             <div class="right1">
               <span>홈</span>
-              <img src="./images/icon-step.png" alt="" />
+              <img src={selectArrow} alt="" />
               <select name="" id="" class="category category1">
                 <option value="">러쉬</option>
                 <option value="">LUSH SPA</option>
               </select>
-              <img src="./images/icon-step.png" alt="" />
+              <img src={selectArrow} alt="" />
               <select name="" id="" class="category category2">
                 <option value="">베스트</option>
                 <option value="">신제품</option>
@@ -812,7 +835,7 @@ export default function MagicCrystals() {
                 <option value="">기프트</option>
                 <option value="">비건</option>
               </select>
-              <img src="./images/icon-step.png" alt="" />
+              <img src={selectArrow} alt="" />
               <select name="" id="" class="category category3">
                 <option value="">솝</option>
                 <option value="">샤워젤&젤리</option>
@@ -826,8 +849,8 @@ export default function MagicCrystals() {
 
             <div class="right2">
               <h3>매직 크리스탈스 300g/600g</h3>
-              <a href="#" class="share-icon"><img src="./images/icon_share.png" alt="공유하기" /></a>
-              <a href="#" class="zzim-icon"><img src="./images/icon-zzim.png" alt="찜하기" /></a>
+              <a href="#" class="share-icon"><img src={share} alt="공유하기" /></a>
+              <a href="#" class="zzim-icon"><img src={zzim} alt="찜하기" /></a>
               <p>#스크럽 #민트의마법 #시원해져라</p>
             </div>{/* right2 */}
 
@@ -887,7 +910,7 @@ export default function MagicCrystals() {
             <a href="#detail-info">상품상세정보</a><a href="#prod-review">상품후기 (150)</a><a href="#sub-info">배송/교환 및 반품안내</a>
           </div>{/* product-detail-menu */}
           <div class="product-video">
-            <img src="./images/magic-crystal-video.jpg" alt="추울 정도로 시원한 샤워 스크럽을 찾고 있는 당신을 위한 스크럽 동영상" />
+            <img src={magiccrystalVideo} alt="추울 정도로 시원한 샤워 스크럽을 찾고 있는 당신을 위한 스크럽 동영상" />
           </div>{/* product-video */}
 
           <div class="product-desc">
@@ -897,7 +920,7 @@ export default function MagicCrystals() {
           </div>
 
           <div class="product-image1">
-            <img src="./images/magic-crystal-main1.jpg"
+            <img src={mainFirst}
               alt="스크럽사진" />
             <div class="product-image1-desc">
               <strong>미리 써 본 후기 ★★★★★</strong>
@@ -921,7 +944,7 @@ export default function MagicCrystals() {
           </div>{/* product-desc2 */}
 
           <div class="product-image2">
-            <img src="./images/magic-crystal-main2.jpg" alt="" />
+            <img src={mainSecond} alt="" />
           </div>{/* product-image2 */}
 
           <div class="product-ingredient-wrap">
@@ -951,19 +974,19 @@ export default function MagicCrystals() {
 
             <div class="ingredient-right">
               <div class="sea-salt">
-                <img src="./images/magic-crystal-main-salt.jpg" alt="바닷소금" />
+                <img src={mainSalt} alt="바닷소금" />
                 <p>바닷소금</p>
                 <span>부드럽고 촉촉한 피부에 도움 <br />*씨솔트</span>
               </div>
 
               <div class="peppermint-oil">
-                <img src="./images/magic-crystal-main-peppermint.jpg" alt="페퍼민트 오일" />
+                <img src={mainPeppermintOil} alt="페퍼민트 오일" />
                 <p>페퍼민트 오일</p>
                 <span>상쾌하고 시원한 향기</span>
               </div>
 
               <div class="star-anise">
-                <img src="./images/magic-crystal-main-anise.jpg" alt="스타 아니스 열매" />
+                <img src={mainAnise} alt="스타 아니스 열매" />
                 <p>스타 아니스 열매</p>
                 <span>알싸한 향기</span>
               </div>
@@ -971,7 +994,7 @@ export default function MagicCrystals() {
           </div>{/* product-ingredient-wrap */}
 
           <div class="product-image3">
-            <img src="./images/magic-crystal-main3.jpg" alt="" />
+            <img src={mainThird} alt="" />
             <div class="product-image3-desc">
               <strong>사용 방법</strong>
               <p>
@@ -988,7 +1011,7 @@ export default function MagicCrystals() {
           </div>
 
           <div class="product-image4">
-            <img src="./images/magic-crystal-main4.jpg" alt="" />
+            <img src={mainFourth} alt="" />
             <div class="product-image4-desc">
               <strong>아티클</strong>
               <p>
@@ -1007,14 +1030,14 @@ export default function MagicCrystals() {
               </p>
               <span>TIP! 냉장배송이 필요한 제품은 100% 물이 담긴 종이 아이스 팩과 함께 출발합니다. (5~9월에 해당)</span>
             </div>
-            <img src="./images/magic-crystal-main5.jpg" alt="" />
+            <img src={mainFifth} alt="" />
           </div>
 
           <div class="product-image6">
             <strong>Check Point!</strong>
             <div class="product-image6-wrap">
               <div class="product-image6-left">
-                <img src="./images/main-packing-check01.png" alt="" />
+                <img src={packingFirst} alt="" />
                 <p>
                   제품에 부착된 스티커에서<br />
                   제조자와 사용 기한을 확인하세요.<br />
@@ -1023,7 +1046,7 @@ export default function MagicCrystals() {
                 </p>
               </div>
               <div class="product-image6-right">
-                <img src="./images/main-packing-check02.png" alt="" />
+                <img src={packingSecond} alt="" />
                 <p>
                   러쉬는 정직한 재료를 사용하여<br />
                   모든 제품을 손으로 만듭니다.<br />
@@ -1036,7 +1059,7 @@ export default function MagicCrystals() {
 
           <div class="product-image7">
             <strong>블랙 팟의 환생 참여방법</strong>
-            <img src="./images/magic-crystal-main6.jpg" alt="" />
+            <img src={mainSix} alt="" />
             <div class="product-image7-desc">
               <p>
                 모두 사용한 블랙 팟 공병을 깨끗이 씻어 매장에 방문해보세요!<br />
@@ -1053,15 +1076,15 @@ export default function MagicCrystals() {
             </div>
             <div class="product-image8-both">
               <div class="product-image8-left">
-                <img src="./images/magic-crystal-other1.jpg" alt="" />
-                <img src="./images/icon_vegan.png" alt="" class="small-icon" />
+                <img src={otherFirst} alt="" />
+                <img src={iconVegan} alt="" class="small-icon" />
                 <p>채러티 팟 45g/240g</p>
                 <span>\ 10,000</span>
               </div>
               <div class="product-image8-right">
-                <img src="./images/magic-crystal-other2.jpg" alt="" />
-                <img src="./images/icon_vegan.png" alt="" class="small-icon" />
-                <img src="./images/icon_fresh.png" alt="" class="small-icon" />
+                <img src={otherSecond} alt="" />
+                <img src={iconVegan} alt="" class="small-icon" />
+                <img src={iconFresh} alt="" class="small-icon" />
                 <p>더티 보디 스프레이</p>
                 <span>\ 50,000</span>
               </div>
@@ -1239,8 +1262,6 @@ export default function MagicCrystals() {
           </div>
         </div>
       </section>
-      <Footer />
     </MagicCrystalsWrapper>
-
   );
 }
