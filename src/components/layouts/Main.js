@@ -12,12 +12,6 @@ import saltScrub from "../../images/content2-banner2.gif";
 import summerIce from "../../images/content2-banner3.jpg";
 import covid from "../../images/content2-banner4.jpg";
 import tangleTreatment from "../../images/content3-banner.gif";
-import bodySpary from "../../images/content1-slide2-1.jpg";
-import sleepBuble from "../../images/content1-slide2-2.jpg";
-import retroStective from "../../images/content1-slide2-3.jpg";
-import theOliveBrench from "../../images/content1-slide2-4.jpg";
-import catastropyCosmetic from "../../images/content1-slide2-5.jpg";
-import maskOfMagnermint from "../../images/content1-slide2-6.jpg";
 
 import slideBanner1 from "../../images/main-banner1.jpg";
 import slideBanner2 from "../../images/main-banner2.jpg";
@@ -40,31 +34,6 @@ const MainWrapper = styled.div`
     display: block;
     min-width: 1280px;
     height: 580px;
-  }
-
-  .main-banner .main-slide1 {
-    height: 580px;
-    background: url(${slideBanner1}) no-repeat center top;
-  }
-  .main-banner .main-slide2 {
-    height: 580px;
-    background: url(${slideBanner2}) no-repeat center top;
-  }
-  .main-banner .main-slide3 {
-    height: 580px;
-    background: url(${slideBanner3}) no-repeat center top;
-  }
-  .main-banner .main-slide4 {
-    height: 580px;
-    background: url(${slideBanner4}) no-repeat center top;
-  }
-  .main-banner .main-slide5 {
-    height: 580px;
-    background: url(${slideBanner5}) no-repeat center top;
-  }
-  .main-banner .main-slide6 {
-    height: 580px;
-    background: url(${slideBanner6}) no-repeat center top;
   }
 
   .bannerIcon li {
@@ -298,22 +267,30 @@ export default function Main() {
   };
 
   const [slideProducts, setSlideProducts] = useState([]);
-  useEffect(function(){
-    fetch('http://localhost:3000/json/slideProducts.json').then(function(res){
-      res.json().then(function(json) {
+  const [slideReviews, setSlideReviews] = useState([]);
+  const [slideBanners, setSlideBanners] = useState([]);
+  useEffect(function () {
+    fetch('http://localhost:3000/json/slideProducts.json').then(function (res) {
+      res.json().then(function (json) {
         setSlideProducts(json);
-      }).catch(function(e) {
-        console.log(e);
+      }).catch(function (e) {
       });
     });
-    
-    fetch('http://localhost:3000/json/slideReviews.json').then(function(res){
-      res.json().then(function(json) {
-        setSlideProducts(json);
-      }).catch(function(e){
+
+    fetch('http://localhost:3000/json/slideReviews.json').then(function (res) {
+      res.json().then(function (json) {
+        setSlideReviews(json);
+      }).catch(function (e) {
       });
     });
-  },[]);
+
+    fetch('http://localhost:3000/json/slideBanners.json').then(function (res) {
+      res.json().then(function (json) {
+        setSlideBanners(json);
+      }).catch(function (e) {
+      });
+    });
+  }, []);
 
   return (
     <MainWrapper>
@@ -322,24 +299,20 @@ export default function Main() {
           <h3>메인 광고 배너</h3>
           <div className="main-banner">
             <Slider {...settings}>
-              <div className="main-slide main-slide1">
-                <a href="javascript:void(0)"></a>
-              </div>
-              <div className="main-slide main-slide2">
-                <a href="javascript:void(0)"></a>
-              </div>
-              <div className="main-slide main-slide3">
-                <a href="javascript:void(0)"></a>
-              </div>
-              <div className="main-slide main-slide4">
-                <a href="javascript:void(0)"></a>
-              </div>
-              <div className="main-slide main-slide5">
-                <a href="javascript:void(0)"></a>
-              </div>
-              <div className="main-slide main-slide6">
-                <a href="javascript:void(0)"></a>
-              </div>
+              {slideBanners.map(function (data) {
+                return (
+                  <div style={{
+                    backgroundImage: `url(${data.thumbUrl})`,
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    height: '580px'
+                  }}
+                  >
+                    <a href="javascript:void(0)"></a>
+                  </div>
+                );
+              })}
             </Slider>
           </div>
         </article>
@@ -363,7 +336,7 @@ export default function Main() {
                       </Link>
                     </div>
                   );
-                })}        
+                })}
               </Slider>
             </div>
             {/* product-slide */}
@@ -371,15 +344,15 @@ export default function Main() {
           {/* product-slide-wrap */}
           <div className="product-slide-reviewwrap">
             <Slider {...settingsReview}>
-            {slideReviews.map(function (data) {
-                  return (
-                    <div>
-                      <Link>
-                        <img src={data.thumbUrl} alt={data.name} />
-                      </Link>
-                    </div>
-                  );
-                })}  
+              {slideReviews.map(function (data) {
+                return (
+                  <div>
+                    <Link>
+                      <img src={data.thumbUrl} alt={data.name} />
+                    </Link>
+                  </div>
+                );
+              })}
             </Slider>
           </div>
           {/* product-slide-sidewrap */}
