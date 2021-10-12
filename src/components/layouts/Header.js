@@ -492,9 +492,9 @@ export default function Header() {
 
                   <div className="overlay-content">
                     <form action="#" method="GET">
-                      <label for="searchbox"></label>
+                      <label htmlFor="searchbox"></label>
                       <input type="text" id="searchbox" placeholder="혹시 더티 마니아인가요?" />
-                      <label for="searchbtn"></label>
+                      <label htmlFor="searchbtn"></label>
                       <input type="image" id="searchbtn" src={btnTopsearchSearch} />
                     </form>
                     <p>지금 가장 많이 찾아요!</p>

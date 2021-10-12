@@ -801,28 +801,28 @@ export default function MagicCrystals() {
   return (
     <MagicCrystalsWrapper>
       <main>
-        <div class="product-intro-wrap">
-          <div class="intro-left">
-            <div class="slide-img1">
+        <div className="product-intro-wrap">
+          <div className="intro-left">
+            <div className="slide-img1">
               <img src={productImgFirst} alt="매직 크리스탈스" />
             </div>
-            <div class="slide-img2">
+            <div className="slide-img2">
               <img src={productImgSecond} alt="매직 크리스탈스" />
             </div>
-            <div class="slide-img3">
+            <div className="slide-img3">
               <img src={productImgThird} alt="매직 크리스탈스" />
             </div>
           </div>{/* intro-left */}
-          <div class="intro-right">
-            <div class="right1">
+          <div className="intro-right">
+            <div className="right1">
               <span>홈</span>
               <img src={selectArrow} alt="" />
-              <select name="" id="" class="category category1">
+              <select name="" id="" className="category category1">
                 <option value="">러쉬</option>
                 <option value="">LUSH SPA</option>
               </select>
               <img src={selectArrow} alt="" />
-              <select name="" id="" class="category category2">
+              <select name="" id="" className="category category2">
                 <option value="">베스트</option>
                 <option value="">신제품</option>
                 <option value="">배쓰</option>
@@ -836,7 +836,7 @@ export default function MagicCrystals() {
                 <option value="">비건</option>
               </select>
               <img src={selectArrow} alt="" />
-              <select name="" id="" class="category category3">
+              <select name="" id="" className="category category3">
                 <option value="">솝</option>
                 <option value="">샤워젤&젤리</option>
                 <option value="">보디 컨디셔너</option>
@@ -847,25 +847,25 @@ export default function MagicCrystals() {
               </select>
             </div>{/* right1 */}
 
-            <div class="right2">
+            <div className="right2">
               <h3>매직 크리스탈스 300g/600g</h3>
-              <a href="#" class="share-icon"><img src={share} alt="공유하기" /></a>
-              <a href="#" class="zzim-icon"><img src={zzim} alt="찜하기" /></a>
+              <a href="#" className="share-icon"><img src={share} alt="공유하기" /></a>
+              <a href="#" className="zzim-icon"><img src={zzim} alt="찜하기" /></a>
               <p>#스크럽 #민트의마법 #시원해져라</p>
             </div>{/* right2 */}
 
-            <div class="right3">
-              <span class="review-more">150개의 후기 보기</span>
-              <span class="to-know">Good to Know{/*이미지*/}</span>
-              <p class="price">판매가 <strong>\32,000</strong></p>
-              <p class="volume">용량</p>
-              <select name="" id="" class="volume-option">
+            <div className="right3">
+              <span className="review-more">150개의 후기 보기</span>
+              <span className="to-know">Good to Know{/*이미지*/}</span>
+              <p className="price">판매가 <strong>\32,000</strong></p>
+              <p className="volume">용량</p>
+              <select name="" id="" className="volume-option">
                 <option value="">300g</option>
                 <option value="">600g:\+26,000</option>
               </select>
-              <div class="btn-group">
-                <button type="submit" class="btn">장바구니</button>
-                <button type="submit" class="btn btn-fill">주문하기</button>
+              <div className="btn-group">
+                <button type="submit" className="btn">장바구니</button>
+                <button type="submit" className="btn btn-fill">주문하기</button>
               </div>{/* btn-group */}
             </div>{/* right3 */}
 
@@ -875,8 +875,8 @@ export default function MagicCrystals() {
 
       <section>
         <h4>Plus Review</h4>
-        <div class="plus-review-wrap">
-          <div class="review-left">
+        <div className="plus-review-wrap">
+          <div className="review-left">
             <p>포토리뷰 모아보기</p>
             <a href="#"><img src="./images/magic-crystal-review1.jpg" alt="" /></a>
             <a href="#"><img src="./images/magic-crystal-review2.jpg" alt="" /></a>
@@ -884,17 +884,17 @@ export default function MagicCrystals() {
             <a href="#"><img src="./images/magic-crystal-review4.jpg" alt="" /></a>
             <a href="#"><img src="./images/magic-crystal-review4.jpg" alt="" /></a>
             <a href="#"><img src="./images/magic-crystal-review4.jpg" alt="" /></a>
-            <a href="#" class="more">더보기&gt;</a>
+            <a href="#" className="more">더보기&gt;</a>
           </div>{/* review-left */}
 
-          <div class="review-right">
-            <div class="review-right-left">
+          <div className="review-right">
+            <div className="review-right-left">
               <div>평가</div>
               <div>4.9</div>
               <div>★★★★</div>
             </div>{/* review-right-left */}
 
-            <div class="review-right-right">
+            <div className="review-right-right">
               <div>리뷰등록 150건</div>
               <div>포토리뷰 44건</div>
               <div>상품조회수 48320건</div>
@@ -905,24 +905,24 @@ export default function MagicCrystals() {
       </section>
 
       <section>
-        <div class="product-detail-page">
-          <div class="product-detail-menu" id="detail-info">
+        <div className="product-detail-page">
+          <div className="product-detail-menu" id="detail-info">
             <a href="#detail-info">상품상세정보</a><a href="#prod-review">상품후기 (150)</a><a href="#sub-info">배송/교환 및 반품안내</a>
           </div>{/* product-detail-menu */}
-          <div class="product-video">
+          <div className="product-video">
             <img src={magiccrystalVideo} alt="추울 정도로 시원한 샤워 스크럽을 찾고 있는 당신을 위한 스크럽 동영상" />
           </div>{/* product-video */}
 
-          <div class="product-desc">
+          <div className="product-desc">
             <p>샤워 스크럽</p>
             <h5>매직 크리스탈스</h5>
             <strong>Magic Crystals Shower Scrub</strong>
           </div>
 
-          <div class="product-image1">
+          <div className="product-image1">
             <img src={mainFirst}
               alt="스크럽사진" />
-            <div class="product-image1-desc">
+            <div className="product-image1-desc">
               <strong>미리 써 본 후기 ★★★★★</strong>
               <p>
                 떨어지면 불안한 저만의 욕실 필수템!<br />
@@ -934,21 +934,21 @@ export default function MagicCrystals() {
             </div>{/* product-image1-desc */}
           </div>{/* product-image1 */}
 
-          <div class="product-desc2">
-            <p class="product-desc2-1">
+          <div className="product-desc2">
+            <p className="product-desc2-1">
               민트와 허브의 상쾌한 향기를 경험해보세요.<br />
               이 제품은 자연에서 얻은 깨끗한 소금을 가득 담아 빛나는 피부로 가꾸는데 도움을 줍니다.<br />
               은하수 별처럼 펼쳐진 고운 바닷소금으로 당신의 피부를 빛내주세요! 신선한 민트,<br />편안한 로즈마리와 세이지 허브의 만남은 거칠어진 피부에 특별한 마법 주문을 외워줄 거예요.
             </p>
-            <p class="product-desc2-2">TIP! 피부에 선사하는 보랏빛 마법!</p>
+            <p className="product-desc2-2">TIP! 피부에 선사하는 보랏빛 마법!</p>
           </div>{/* product-desc2 */}
 
-          <div class="product-image2">
+          <div className="product-image2">
             <img src={mainSecond} alt="" />
           </div>{/* product-image2 */}
 
-          <div class="product-ingredient-wrap">
-            <div class="ingredient-left">
+          <div className="product-ingredient-wrap">
+            <div className="ingredient-left">
               <h5>제품 성분</h5>
               <p>* 원재료의 특성에 한함</p>
 
@@ -972,20 +972,20 @@ export default function MagicCrystals() {
               </p>
             </div>{/* ingredient-left */}
 
-            <div class="ingredient-right">
-              <div class="sea-salt">
+            <div className="ingredient-right">
+              <div className="sea-salt">
                 <img src={mainSalt} alt="바닷소금" />
                 <p>바닷소금</p>
                 <span>부드럽고 촉촉한 피부에 도움 <br />*씨솔트</span>
               </div>
 
-              <div class="peppermint-oil">
+              <div className="peppermint-oil">
                 <img src={mainPeppermintOil} alt="페퍼민트 오일" />
                 <p>페퍼민트 오일</p>
                 <span>상쾌하고 시원한 향기</span>
               </div>
 
-              <div class="star-anise">
+              <div className="star-anise">
                 <img src={mainAnise} alt="스타 아니스 열매" />
                 <p>스타 아니스 열매</p>
                 <span>알싸한 향기</span>
@@ -993,9 +993,9 @@ export default function MagicCrystals() {
             </div>{/* ingredient-right */}
           </div>{/* product-ingredient-wrap */}
 
-          <div class="product-image3">
+          <div className="product-image3">
             <img src={mainThird} alt="" />
-            <div class="product-image3-desc">
+            <div className="product-image3-desc">
               <strong>사용 방법</strong>
               <p>
                 부드러운 스크럽을 원한다면 적당량을 덜어 샤워 젤처럼<br />
@@ -1010,9 +1010,9 @@ export default function MagicCrystals() {
             </div>{/* product-image3-desc */}
           </div>
 
-          <div class="product-image4">
+          <div className="product-image4">
             <img src={mainFourth} alt="" />
-            <div class="product-image4-desc">
+            <div className="product-image4-desc">
               <strong>아티클</strong>
               <p>
                 프레쉬 & 핸드메이드 정책
@@ -1021,8 +1021,8 @@ export default function MagicCrystals() {
             </div>
           </div>
 
-          <div class="product-image5">
-            <div class="product-image5-desc">
+          <div className="product-image5">
+            <div className="product-image5-desc">
               <strong>친환경 포장</strong>
               <p>
                 환경을 생각하는 마음을 담아 신선하게 배송해 드립니다.<br />
@@ -1033,10 +1033,10 @@ export default function MagicCrystals() {
             <img src={mainFifth} alt="" />
           </div>
 
-          <div class="product-image6">
+          <div className="product-image6">
             <strong>Check Point!</strong>
-            <div class="product-image6-wrap">
-              <div class="product-image6-left">
+            <div className="product-image6-wrap">
+              <div className="product-image6-left">
                 <img src={packingFirst} alt="" />
                 <p>
                   제품에 부착된 스티커에서<br />
@@ -1045,7 +1045,7 @@ export default function MagicCrystals() {
                   찾아볼 수 있습니다.
                 </p>
               </div>
-              <div class="product-image6-right">
+              <div className="product-image6-right">
                 <img src={packingSecond} alt="" />
                 <p>
                   러쉬는 정직한 재료를 사용하여<br />
@@ -1057,10 +1057,10 @@ export default function MagicCrystals() {
             </div>
           </div>
 
-          <div class="product-image7">
+          <div className="product-image7">
             <strong>블랙 팟의 환생 참여방법</strong>
             <img src={mainSix} alt="" />
-            <div class="product-image7-desc">
+            <div className="product-image7-desc">
               <p>
                 모두 사용한 블랙 팟 공병을 깨끗이 씻어 매장에 방문해보세요!<br />
                 신선한 프레쉬 페이스 마스크 1종을 선물해드립니다.
@@ -1069,22 +1069,22 @@ export default function MagicCrystals() {
             </div>
           </div>
 
-          <div class="product-image8">
-            <div class="product-image8-desc">
+          <div className="product-image8">
+            <div className="product-image8-desc">
               <strong>함께하면 더 좋은 제품</strong>
               <p>함께 사용하면 좋습니다.</p>
             </div>
-            <div class="product-image8-both">
-              <div class="product-image8-left">
+            <div className="product-image8-both">
+              <div className="product-image8-left">
                 <img src={otherFirst} alt="" />
-                <img src={iconVegan} alt="" class="small-icon" />
+                <img src={iconVegan} alt="" className="small-icon" />
                 <p>채러티 팟 45g/240g</p>
                 <span>\ 10,000</span>
               </div>
-              <div class="product-image8-right">
+              <div className="product-image8-right">
                 <img src={otherSecond} alt="" />
-                <img src={iconVegan} alt="" class="small-icon" />
-                <img src={iconFresh} alt="" class="small-icon" />
+                <img src={iconVegan} alt="" className="small-icon" />
+                <img src={iconFresh} alt="" className="small-icon" />
                 <p>더티 보디 스프레이</p>
                 <span>\ 50,000</span>
               </div>
@@ -1094,54 +1094,54 @@ export default function MagicCrystals() {
       </section>
 
       <section>
-        <div class="product-detail-page2">
-          <div class="product-detail-menu2" id="prod-review">
+        <div className="product-detail-page2">
+          <div className="product-detail-menu2" id="prod-review">
             <a href="#detail-info">상품상세정보</a><a href="#prod-review">상품후기 (150)</a><a href="#sub-info">배송/교환 및 반품안내</a>
           </div>
-          <div class="product-review-write-wrap">
+          <div className="product-review-write-wrap">
             <strong>Product Reviews ★★★★ 150</strong>
             <p>나만의 꿀팁이나 제품을 사용하는 생생한 모습을 보여주세요!</p>
-            <div class="write-space">
+            <div className="write-space">
               <form action="#" method="">
-                <div class="star-score">
+                <div className="star-score">
                   <span>평가</span>
                   <input type="radio" id="5" />
-                  <label for="5">★★★★★</label>
+                  <label htmlFor="5">★★★★★</label>
                   <input type="radio" id="4" />
-                  <label for="4">★★★★☆</label>
+                  <label htmlFor="4">★★★★☆</label>
                   <input type="radio" id="3" />
-                  <label for="3">★★★☆☆</label>
+                  <label htmlFor="3">★★★☆☆</label>
                   <input type="radio" id="2" />
-                  <label for="2">★★☆☆☆</label>
+                  <label htmlFor="2">★★☆☆☆</label>
                   <input type="radio" id="1" />
-                  <label for="1">★☆☆☆☆</label>
+                  <label htmlFor="1">★☆☆☆☆</label>
                 </div>
 
                 <div>
-                  <input type="textarea" class="textarea" />
+                  <input type="textarea" className="textarea" />
                 </div>
 
-                <div class="privercy-wrap">
+                <div className="privercy-wrap">
                   <p>비회원 개인정보 수집동의
                     <a href="#">전체보기</a>
                   </p>
-                  <div class="privercy-desc">
+                  <div className="privercy-desc">
                     <p>
                       -수집항목:이름,휴대전화번호,작성 비밀번호-수집/이용목적:게시글 접수 및 결과 회신.이용기간:원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단,관계법령의 규정에 의하여 보전할 필요가 있는 경우 일정기간 동안 개인정보를 보관할 수 있습니다. 위와 같이 수집하는 개인정보에 대해,동의하지 않거나 거부할 수 있습니다.다만,동의하지 않거나 거부할 경우 회원에게 제공되는 서비스가 제한될 수 있습니다.그 밖의 사항은 (주)러쉬코리아 개인정보처리방침을 준수합니다.
                     </p>
                   </div>
 
-                  <div class="privercy-agree">
-                    <label for="">작성자</label>
+                  <div className="privercy-agree">
+                    <label htmlFor="">작성자</label>
                     <input type="text" />
-                    <label for="">비밀번호</label>
+                    <label htmlFor="">비밀번호</label>
                     <input type="password" />
                     <input type="checkbox" />
-                    <label for="">위 내용에 동의 합니다.</label>
+                    <label htmlFor="">위 내용에 동의 합니다.</label>
                   </div>
 
-                  <div class="complete">
-                    <input type="file" class="camera" />
+                  <div className="complete">
+                    <input type="file" className="camera" />
                     <button type="submit">후기작성</button>
                   </div>
 
@@ -1155,33 +1155,33 @@ export default function MagicCrystals() {
       </section>
 
       <section>
-        <div class="product-detail-page3">
-          <div class="product-detail-menu3" id="sub-info">
+        <div className="product-detail-page3">
+          <div className="product-detail-menu3" id="sub-info">
             <a href="#detail-info">상품상세정보</a><a href="#prod-review">상품후기 (150)</a><a href="#sub-info">배송/교환 및 반품안내</a>
           </div>
 
-          <div class="desc-box">
-            <p class="desc1">
+          <div className="desc-box">
+            <p className="desc1">
               ■ 배송비:기본배송료는 2,500원 입니다.(도서,산간,오지 일부지역은 배송비가 추가될 수 있습니다)<br />
               ■ 택배사:우체국 택배를 이용합니다.<br />
               ■ 배송가능지역:국내 배송/해외 배송은 불가 합니다.
             </p>
 
-            <p class="desc2">
+            <p className="desc2">
               ■홈페이지에서 구매한 경우
             </p>
 
-            <p class="desc3">
+            <p className="desc3">
               러쉬코리아 홈페이지에서 구매한 제품은 홈페이지를 통해서만 교환이 가능합니다.<br />
               고객님의 변심에 의한 반품인 경우 상품 및 서비스를 공급 받은 날로부터 7일 이내 가능하며, 미 개봉 제품만 가능합니다.
             </p>
 
-            <p class="desc4">
+            <p className="desc4">
               고객센터(1644-2357)로 반품 접수를 받고 있으며,
               지정 택배사를 이용하여 상품 회수 후 교환/반품 여부에 관한 안내가 이루어집니다.
             </p>
 
-            <p class="desc5">
+            <p className="desc5">
               *고객변심으로 인한 교환시 초도 택배 비용을 포함한 반품 택배 비용이 부과됩니다.<br />
               *상품결함으로 인한 교환의 경우 러쉬코리아에서 택배비용을 부담합니다.<br />
               *택배 비용은 무통장 입금을 통해서만 결제 가능합니다.<br />
@@ -1189,18 +1189,18 @@ export default function MagicCrystals() {
               *프레쉬 마스크를 포함하여 냉장배송을 받은 제품은 교환이 불가합니다.
             </p>
 
-            <p class="desc6">
+            <p className="desc6">
               ■ 휴대폰 소액 결제 시 꼭 참고해주세요.<br />
               휴대폰 소액 결제는 익월 결제 취소가 불가한 통신사 정책으로 인해, 당월 (1일~31일) 에 한한 결제 건만 취소/환불할 수 있습니다.<br />
               또한 부분 결제 취소 불가하오니 주문 시 유의 바랍니다.
             </p>
 
-            <p class="desc7">
+            <p className="desc7">
               고객센터 1644-2357
             </p>
           </div>
 
-          <div class="desc-table">
+          <div className="desc-table">
             <table>
               <tr>
                 <th>사용 방법</th>

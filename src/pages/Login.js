@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+import iconId from "../images/icon-id.png";
+import iconPW from "../images/icon-password.png";
+
 const LoginWrapper = styled.div`
   /* 로그인 화면 */
   .login-section h3 {
@@ -127,19 +130,21 @@ export default function Login() {
             <form action="#" method="POST">
               <div className="id-box">
                 <span>
-                  <img src="./images/icon-id.png" alt="아이디" />
+                  <img src={iconId} alt="아이디" />
                 </span>
+                <label htmlFor="ID"></label>
                 <input type="text" placeholder="아이디" id="ID" />
               </div>
               <div className="pw-box">
                 <span>
-                  <img src="./images/icon-password.png" alt="비밀번호" />
+                  <img src={iconPW} alt="비밀번호" />
                 </span>
+                <label htmlFor="PW"></label>
                 <input type="password" placeholder="비밀번호" id="PW" />
               </div>
               <div className="id-memory-box">
                 <input type="checkbox" id="id-memory" />
-                <label for="id-memory">아이디 저장</label>
+                <label htmlFor="id-memory">아이디 저장</label>
               </div>
               <button type="submit" className="login-btn">
                 로그인

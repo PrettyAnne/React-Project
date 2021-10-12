@@ -26,18 +26,6 @@ import slideBanner4 from "../../images/main-banner4.jpg";
 import slideBanner5 from "../../images/main-banner5.jpg";
 import slideBanner6 from "../../images/main-banner6.jpg";
 
-import magicCrystals from "../../images/content1-slide1-1.jpg";
-import magnerMint from "../../images/content1-slide1-2.jpg";
-import oliveBrench from "../../images/content1-slide1-3.jpg";
-import dirtyBodySpary from "../../images/content1-slide1-4.jpg";
-import daddyO from "../../images/content1-slide1-5.jpg";
-import newOO from "../../images/content1-slide1-6.jpg";
-import dontLookatme from "../../images/content1-slide1-7.jpg";
-import seeVegi from "../../images/content1-slide1-8.jpg";
-import loveLove from "../../images/content1-slide1-9.png";
-import sexBom from "../../images/content1-slide1-10.jpg";
-import angelsOn from "../../images/content1-slide1-11.jpg";
-import twilight from "../../images/content1-slide1-12.jpg";
 import { useEffect, useState } from "react";
 
 const MainWrapper = styled.div`
@@ -222,7 +210,7 @@ export default function Main() {
     arrows: false,
     infinite: true,
     autoplay: true,
-    speed: 3000,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     appendDots: (dots) => (
@@ -318,6 +306,13 @@ export default function Main() {
         console.log(e);
       });
     });
+    
+    fetch('http://localhost:3000/json/slideReviews.json').then(function(res){
+      res.json().then(function(json) {
+        setSlideProducts(json);
+      }).catch(function(e){
+      });
+    });
   },[]);
 
   return (
@@ -336,13 +331,13 @@ export default function Main() {
               <div className="main-slide main-slide3">
                 <a href="javascript:void(0)"></a>
               </div>
-              <div className="main-slide main-slide4 fade">
+              <div className="main-slide main-slide4">
                 <a href="javascript:void(0)"></a>
               </div>
-              <div className="main-slide main-slide5 fade">
+              <div className="main-slide main-slide5">
                 <a href="javascript:void(0)"></a>
               </div>
-              <div className="main-slide main-slide6 fade">
+              <div className="main-slide main-slide6">
                 <a href="javascript:void(0)"></a>
               </div>
             </Slider>
@@ -376,36 +371,15 @@ export default function Main() {
           {/* product-slide-wrap */}
           <div className="product-slide-reviewwrap">
             <Slider {...settingsReview}>
-              <div className="review1">
-                <a href="javascript:void(0)">
-                  <img src={bodySpary} alt="더티 보디 스프레이" />
-                </a>
-              </div>
-              <div className="review2">
-                <a href="javascript:void(0)">
-                  <img src={sleepBuble} alt="슬리피 버블바" />
-                </a>
-              </div>
-              <div className="review3">
-                <a href="javascript:void(0)">
-                  <img src={retroStective} alt="더 레트로 스텍티브" />
-                </a>
-              </div>
-              <div className="review4">
-                <a href="javascript:void(0)">
-                  <img src={theOliveBrench} alt="더 올리브 브랜치" />
-                </a>
-              </div>
-              <div className="review5">
-                <a href="javascript:void(0)">
-                  <img src={catastropyCosmetic} alt="카타스트로피 코스메틱" />
-                </a>
-              </div>
-              <div className="review6">
-                <a href="javascript:void(0)">
-                  <img src={maskOfMagnermint} alt="마스크 오브 매그너민트" />
-                </a>
-              </div>
+            {slideReviews.map(function (data) {
+                  return (
+                    <div>
+                      <Link>
+                        <img src={data.thumbUrl} alt={data.name} />
+                      </Link>
+                    </div>
+                  );
+                })}  
             </Slider>
           </div>
           {/* product-slide-sidewrap */}

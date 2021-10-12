@@ -190,7 +190,7 @@ export default function Footer() {
             </ul>
 
             <form action="#" method="GET">
-              <label for="email"></label>
+              <label htmlFor="email"></label>
               <input type="text" placeholder="이메일 주소를 입력해 주세요." id="email" className="email" />
               <button type="button">구독하기</button>
             </form>

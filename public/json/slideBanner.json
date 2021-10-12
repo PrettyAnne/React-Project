@@ -1,0 +1,32 @@
+[
+  {
+    "id":"1banner",
+    "name":"메인슬라이드배너 1번째",
+    "thumbUrl":"https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/d7fdf0e5e24e67634a1b8234f457d98d_93007.jpg",
+    "url":"/slideBanner/1"
+  },
+  {
+    "id":"2banner",
+    "name":"메인슬라이드배너 2번째",
+    "thumbUrl":"https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/070251f41882f6b3ca199c2de70a49fb_61190.jpg",
+    "url":"/slideBanner/2"
+  },
+  {
+    "id":"3banner",
+    "name":"메인슬라이드배너 3번째",
+    "thumbUrl":"https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/712ea732bebad161d567c873616e126c_89743.jpg",
+    "url":"/slideBanner/3"
+  },
+  {
+    "id":"4banner",
+    "name":"메인슬라이드배너 4번째",
+    "thumbUrl":"https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/fea2321aa4edbe64679e7a1149b14889_97202.jpg",
+    "url":"/slideBanner/4"
+  },
+  {
+    "id":"5banner",
+    "name":"메인슬라이드배너 5번째",
+    "thumbUrl":"https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/4efd66da8d3e62956af18d8b8e7bd33d_46179.jpg",
+    "url":"/slideBanner/5"
+  }
+]
