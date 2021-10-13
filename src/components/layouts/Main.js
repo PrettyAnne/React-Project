@@ -301,15 +301,17 @@ export default function Main() {
             <Slider {...settings}>
               {slideBanners.map(function (data) {
                 return (
-                  <div style={{
-                    backgroundImage: `url(${data.thumbUrl})`,
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    height: '580px'
-                  }}
-                  >
-                    <a href="javascript:void(0)"></a>
+                  <div>
+                    <div style={{
+                      backgroundImage: `url(${data.thumbUrl})`,
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      height: '580px'
+                    }}
+                    >
+                      <a href="javascript:void(0)"></a>
+                    </div>
                   </div>
                 );
               })}
