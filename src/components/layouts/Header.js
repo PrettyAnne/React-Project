@@ -47,15 +47,15 @@ h1,h2,h3,h4,h5 {
 }
 
 /* 1단 메뉴 */
-.header-wrap .header-menu .gnb1step {
+.header-wrap .header-nav .gnb1step {
   display: flex;
 }
 
-.header-wrap .header-menu .gnb1step > li {
+.header-wrap .header-nav .gnb1step > li {
   margin-right: 70px;
 }
 
-.header-wrap .header-menu .gnb1step > li > a {
+.header-wrap .header-nav .gnb1step > li > a {
   display: inline-block;
   height: 100px;
   font-family: 'Noto Sans KR';
@@ -171,19 +171,19 @@ h1,h2,h3,h4,h5 {
   display: flex;
 }
 
-.header-wrap .header-icon .sch {
+.header-wrap .header-icon .schBtn {
   margin-right: 35px;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.header-wrap .header-icon .cart {
+.header-wrap .header-icon .cartBtn {
   margin-right: 30px;
   line-height: 104px;
 }
 
-.header-wrap .header-icon .mpg {
+.header-wrap .header-icon .mpgBtn {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -214,7 +214,7 @@ h1,h2,h3,h4,h5 {
   right: 9px;
 }
 
-.header-icon .mpg:hover .mpg-drop {
+.header-icon .mpgBtn:hover .mpg-drop {
   display: block;
 }
 
@@ -230,7 +230,7 @@ h1,h2,h3,h4,h5 {
   border-bottom: 1px solid #eaeaea;
 }
 
-.header-icon .mpg:hover ~ .mpg-drop {
+.header-icon .mpgBtn:hover ~ .mpg-drop {
   display: block;
 }
 
@@ -278,7 +278,7 @@ h1,h2,h3,h4,h5 {
   color: #fff;
 }
 
-.closebtn {
+.closeBtn {
   position: absolute;
   top: 0;
   right: 20px;
@@ -289,7 +289,7 @@ h1,h2,h3,h4,h5 {
   cursor: pointer;
 }
 
-#searchbox {
+#searchBox {
   padding: 10px 0;
   border: none;
   border-bottom: 1px solid #fff;
@@ -298,7 +298,7 @@ h1,h2,h3,h4,h5 {
   text-align: center;
 }
 
-#searchbox:focus {
+#searchBox:focus {
   color: #fff;
 }
 
@@ -320,7 +320,7 @@ export default function Header() {
 
             <nav>
               <h2>러쉬 메뉴</h2>
-              <div className="header-menu">
+              <div className="header-nav">
                 <ul className="gnb1step">
                   <li>
                     <a href="javascript:void(0)">제품</a>
@@ -481,21 +481,21 @@ export default function Header() {
 
             </nav>
             <div className="header-icon">
-              <button type="button" className="sch" aria-label="검색" onClick={() => { setIsMyNavShow(true); }}>
+              <button type="button" className="schBtn" aria-label="검색" onClick={() => { setIsMyNavShow(true); }}>
                 <img src={headerIconSearch} alt="검색하기" />
               </button>
 
               {
 
                 isMyNavShow && (<div className="overlay" id="myNav">
-                  <button onClick={() => { setIsMyNavShow(false); }} className="closebtn">&times;</button>
+                  <button onClick={() => { setIsMyNavShow(false); }} className="closeBtn">&times;</button>
 
                   <div className="overlay-content">
                     <form action="#" method="GET">
-                      <label htmlFor="searchbox"></label>
-                      <input type="text" id="searchbox" placeholder="혹시 더티 마니아인가요?" />
-                      <label htmlFor="searchbtn"></label>
-                      <input type="image" id="searchbtn" src={btnTopsearchSearch} />
+                      <label htmlFor="searchBox"></label>
+                      <input type="text" id="searchBox" placeholder="혹시 더티 마니아인가요?" />
+                      <label htmlFor="searchBtn"></label>
+                      <input type="image" id="searchBtn" src={btnTopsearchSearch} />
                     </form>
                     <p>지금 가장 많이 찾아요!</p>
                     <ul>
@@ -511,11 +511,11 @@ export default function Header() {
                 </div>)}
 
 
-              <a href="javascript:void(0)" className="cart" aria-label="장바구니">
+              <a href="javascript:void(0)" className="cartBtn" aria-label="장바구니">
                 <img src={headerIconCart} alt="장바구니" />
               </a>
 
-              <button type="button" className="mpg" aria-label="마이페이지">
+              <button type="button" className="mpgBtn" aria-label="마이페이지">
                 <img src={headerIconMypage} alt="마이페이지" />
                 <div className="mpg-drop">
                   <ul className="mpg-drop-inner">

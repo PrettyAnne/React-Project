@@ -44,7 +44,7 @@ footer {
   margin-bottom: 20px;
 }
 
-.footer-wrap .footer-left .mail1 {
+.footer-wrap .footer-left .mail {
   display: block; 
   margin-bottom: 20px;
   font-size: 14px;
@@ -63,14 +63,6 @@ footer {
 .footer-wrap .footer-left i {
   display: inline-block;
   margin-bottom: 20px;
-}
-
-.footer-wrap .footer-left .mail2 {
-  display: block;
-  margin-bottom: 20px;
-  text-decoration: underline;
-  font-size: 14px;
-  color: #fff;
 }
 
 .footer-wrap .footer-left .sns {
@@ -161,14 +153,14 @@ export default function Footer() {
             </h6>
 
             <strong>고객센터 1644-2357</strong>
-            <a href="mailto:webmaster@lush.co.kr" className="mail1">webmaster@lush.co.kr</a>
+            <a href="mailto:webmaster@lush.co.kr" className="mail">webmaster@lush.co.kr</a>
             <p>
               상담전화 7/12~8/22<br />
               <span>유선응대 임시중단</span><br />
               상담톡 10:00~16:00(평일)
             </p>
             <i>기업선물 070-4713-8543</i>
-            <a href="mailto:order@lush.co.kr" className="mail2">order@lush.co.kr</a>
+            <a href="mailto:order@lush.co.kr" className="mail">order@lush.co.kr</a>
 
             <ul className="sns">
               <li><a href="javascript:void(0)"><img src={facebookLogo} alt="페이스북" /></a></li>

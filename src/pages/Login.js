@@ -35,7 +35,7 @@ const LoginWrapper = styled.div`
 
   .id-box span,
   .pw-box span {
-    display: inline-block;
+    vertical-align: middle;
     margin-left: 8px;
   }
 
@@ -67,7 +67,6 @@ const LoginWrapper = styled.div`
     width: 85%;
     height: 100%;
     display: inline-block;
-    /* padding: 10px 0; */
     border: none;
     text-align: center;
   }
@@ -90,6 +89,7 @@ const LoginWrapper = styled.div`
 
   .login-other {
     width: 500px;
+    margin-bottom: 40px;
     padding: 0 76px;
   }
 
@@ -105,7 +105,7 @@ const LoginWrapper = styled.div`
   .login-other li:nth-child(2)::after {
     content: "|";
     display: inline-block;
-    padding-left: 10px;
+    margin: 0 10px;
     font-size: 13px;
     color: #8f8f8f;
   }

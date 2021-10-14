@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+import magicCrystalReview1 from "../images/magic-crystal-review1.jpg";
+import magicCrystalReview2 from "../images/magic-crystal-review2.jpg";
+import magicCrystalReview3 from "../images/magic-crystal-review3.jpg";
+import magicCrystalReview4 from "../images/magic-crystal-review4.jpg";
+
 import productImgFirst from "../images/magic-crystal-img1.jpg";
 import productImgSecond from "../images/magic-crystal-img2.jpg";
 import productImgThird from "../images/magic-crystal-img3.jpg";
@@ -54,6 +59,11 @@ const MagicCrystalsWrapper = styled.div`
   margin-bottom: 20px;
 }
 
+.selectArrow {
+  display: inline-block;
+  margin: 0 10px;
+}
+
 .right2 h3 {
   display: inline-block;
   margin-bottom: 20px;
@@ -103,8 +113,14 @@ const MagicCrystalsWrapper = styled.div`
 
 .right3 .volume {
   display: inline-block;
-  margin-right: 115px;
-  margin-bottom: 20px;
+  margin: 0 115px 80px 0;
+}
+
+#volumeOption {
+  width: 280px;
+  padding: 10px;
+  color: #333;
+  font-size: 14px;
 }
 
 .btn {
@@ -115,6 +131,7 @@ const MagicCrystalsWrapper = styled.div`
 }
 
 .btn-fill {
+  margin-left: 10px;
   background-color: #000;
   color: #fff;
   border: none;
@@ -130,17 +147,12 @@ section h4 {
 }
 
 .plus-review-wrap {
+  display: flex;
+  justify-content: space-between;
   padding: 0 30px 100px;
 }
 
-.plus-review-wrap::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 .review-left {
-  float: left;
   padding: 30px 15px;
   border: 1px solid #eee;
 }
@@ -162,25 +174,17 @@ section h4 {
 }
 
 .review-right {
-  float: right;
+  display: flex;
   padding: 62px 50px;
   border: 1px solid #eee;
 }
 
-.review-right::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 .review-right-left {
-  float: left;
   margin-right: 100px;
   text-align: center;
 }
 
 .review-right-right {
-  float: left;
 }
 
 /* 상품상세정보 */
@@ -806,27 +810,26 @@ export default function MagicCrystals() {
             <div className="slide-img1">
               <img src={productImgFirst} alt="매직 크리스탈스" />
             </div>
+
             <div className="slide-img2">
               <img src={productImgSecond} alt="매직 크리스탈스" />
-            </div>
-            <div className="slide-img3">
               <img src={productImgThird} alt="매직 크리스탈스" />
             </div>
           </div>{/* intro-left */}
           <div className="intro-right">
             <div className="right1">
               <span>홈</span>
-              <img src={selectArrow} alt="" />
+              <img src={selectArrow} className="selectArrow" alt="" />
               <select name="" id="" className="category category1">
                 <option value="">러쉬</option>
                 <option value="">LUSH SPA</option>
               </select>
-              <img src={selectArrow} alt="" />
+              <img src={selectArrow} className="selectArrow" alt="" />
               <select name="" id="" className="category category2">
                 <option value="">베스트</option>
                 <option value="">신제품</option>
                 <option value="">배쓰</option>
-                <option value="">샤워</option>
+                <option value="" selected>샤워</option>
                 <option value="">보디</option>
                 <option value="">페이스</option>
                 <option value="">헤어</option>
@@ -835,14 +838,14 @@ export default function MagicCrystals() {
                 <option value="">기프트</option>
                 <option value="">비건</option>
               </select>
-              <img src={selectArrow} alt="" />
+              <img src={selectArrow} className="selectArrow" alt="" />
               <select name="" id="" className="category category3">
                 <option value="">솝</option>
                 <option value="">샤워젤&젤리</option>
                 <option value="">보디 컨디셔너</option>
                 <option value="">샤워밤</option>
                 <option value="">샤워오일</option>
-                <option value="">스크럽&버터</option>
+                <option value="" selected>스크럽&버터</option>
                 <option value="">펀</option>
               </select>
             </div>{/* right1 */}
@@ -859,7 +862,8 @@ export default function MagicCrystals() {
               <span className="to-know">Good to Know{/*이미지*/}</span>
               <p className="price">판매가 <strong>\32,000</strong></p>
               <p className="volume">용량</p>
-              <select name="" id="" className="volume-option">
+              <select name="" id="volumeOption" className="volume-option">
+                <option value="" selected>=옵션:가격=</option>
                 <option value="">300g</option>
                 <option value="">600g:\+26,000</option>
               </select>
@@ -878,12 +882,10 @@ export default function MagicCrystals() {
         <div className="plus-review-wrap">
           <div className="review-left">
             <p>포토리뷰 모아보기</p>
-            <a href="#"><img src="./images/magic-crystal-review1.jpg" alt="" /></a>
-            <a href="#"><img src="./images/magic-crystal-review2.jpg" alt="" /></a>
-            <a href="#"><img src="./images/magic-crystal-review3.jpg" alt="" /></a>
-            <a href="#"><img src="./images/magic-crystal-review4.jpg" alt="" /></a>
-            <a href="#"><img src="./images/magic-crystal-review4.jpg" alt="" /></a>
-            <a href="#"><img src="./images/magic-crystal-review4.jpg" alt="" /></a>
+            <a href="#"><img src={magicCrystalReview1} alt="리뷰 보기" /></a>
+            <a href="#"><img src={magicCrystalReview2} alt="리뷰 보기" /></a>
+            <a href="#"><img src={magicCrystalReview3} alt="리뷰 보기" /></a>
+            <a href="#"><img src={magicCrystalReview4} alt="리뷰 보기" /></a>
             <a href="#" className="more">더보기&gt;</a>
           </div>{/* review-left */}
 

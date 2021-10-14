@@ -13,13 +13,6 @@ import summerIce from "../../images/content2-banner3.jpg";
 import covid from "../../images/content2-banner4.jpg";
 import tangleTreatment from "../../images/content3-banner.gif";
 
-import slideBanner1 from "../../images/main-banner1.jpg";
-import slideBanner2 from "../../images/main-banner2.jpg";
-import slideBanner3 from "../../images/main-banner3.jpg";
-import slideBanner4 from "../../images/main-banner4.jpg";
-import slideBanner5 from "../../images/main-banner5.jpg";
-import slideBanner6 from "../../images/main-banner6.jpg";
-
 import { useEffect, useState } from "react";
 
 const MainWrapper = styled.div`
