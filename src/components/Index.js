@@ -1,10 +1,12 @@
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
-import Main from "./layouts/Main";
+import Main from "../pages/Main";
 import Login from "../pages/Login";
 import MagicCrystals from "../pages/MagicCrystals";
 
+import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ScrollToTop from "./layouts/ScrollToTop";
 
 export default function Index() {
   return (
@@ -15,9 +17,11 @@ export default function Index() {
           <Main />
         </Route>
         <Route path="/Login">
+        <ScrollToTop />
           <Login />
         </Route>
-        <Route path="/MagicCrystals">
+        <Route path="/product/:productId">
+          <ScrollToTop />
           <MagicCrystals />
         </Route>
       </Switch>

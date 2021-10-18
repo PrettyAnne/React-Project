@@ -31,6 +31,8 @@ import iconFresh from "../images/icon_fresh.png";
 import iconSpecialVegan from "../images/icon-special-vegan.png";
 import iconSpecialSp from "../images/icon-special-sp.png";
 import iconCamera from "../images/icon_camera.png";
+import { useParams } from "react-router";
+import { useEffect } from "react";
 
 const MagicCrystalsWrapper = styled.div`
 /* 매직크리스탈스 메인 */
@@ -802,6 +804,10 @@ section h4 {
 `;
 
 export default function MagicCrystals() {
+  let { productId } = useParams();
+  useEffect(() => {
+    fetch(`/product/${productId}`)
+  }, []);
   return (
     <MagicCrystalsWrapper>
       <main>

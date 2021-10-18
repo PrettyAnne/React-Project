@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 
 import styled from "styled-components";
 
-import titleImg from "../../images/content2-title.png";
-import consTantin from "../../images/content2-banner1.jpg";
-import saltScrub from "../../images/content2-banner2.gif";
-import summerIce from "../../images/content2-banner3.jpg";
-import covid from "../../images/content2-banner4.jpg";
-import tangleTreatment from "../../images/content3-banner.gif";
+import titleImg from "../images/content2-title.png";
+import consTantin from "../images/content2-banner1.jpg";
+import saltScrub from "../images/content2-banner2.gif";
+import summerIce from "../images/content2-banner3.jpg";
+import covid from "../images/content2-banner4.jpg";
+import tangleTreatment from "../images/content3-banner.gif";
 
 import { useEffect, useState } from "react";
 
@@ -165,7 +165,7 @@ const MainWrapper = styled.div`
   }
 `;
 
-export default function Main() {
+export default function Main(props) {
   const settings = {
     fade: true,
     dots: true,
