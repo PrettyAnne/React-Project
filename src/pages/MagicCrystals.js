@@ -804,10 +804,10 @@ section h4 {
 `;
 
 export default function MagicCrystals() {
-  let { productId } = useParams();
-  useEffect(() => {
-    fetch(`/product/${productId}`)
-  }, []);
+  // let { productId } = useParams();
+  // useEffect(() => {
+  //   fetch(`/product/${productId}`)
+  // }, []);
   return (
     <MagicCrystalsWrapper>
       <main>

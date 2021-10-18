@@ -4,7 +4,6 @@ import Main from "../pages/Main";
 import Login from "../pages/Login";
 import MagicCrystals from "../pages/MagicCrystals";
 
-import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./layouts/ScrollToTop";
 
@@ -20,7 +19,7 @@ export default function Index() {
         <ScrollToTop />
           <Login />
         </Route>
-        <Route path="/product/:productId">
+        <Route path="/MagicCrystals">
           <ScrollToTop />
           <MagicCrystals />
         </Route>
