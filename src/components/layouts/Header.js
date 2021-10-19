@@ -307,7 +307,7 @@ const HeaderWrapper = styled.div`
 `;
 
 export default function Header() {
-  // const [isMyNavShow, setIsMyNavShow] = useState(false);
+  const [isMyNavShow, setIsMyNavShow] = useState(false);
   const [gnbLists, setGnbLists] = useState([]);
   const [infoLists, setInfoLists] = useState([]);
   const testRef = useRef();
@@ -326,7 +326,6 @@ export default function Header() {
       });
     });
 
-    testRef.current.style.display = 'none';
   }, []);
 
 
@@ -418,7 +417,7 @@ export default function Header() {
               <img src={headerIconSearch} alt="검색하기" />
             </button>
 
-            {/*isMyNavShow && (*/
+            {isMyNavShow && (
               <div className="overlay" id="myNav" ref={testRef}>
                 <button
                   onClick={() => {
@@ -467,7 +466,7 @@ export default function Header() {
                   </ul>
                 </div>
               </div>
-            /*)*/}
+            )}
 
             <a
               href="javascript:void(0)"

@@ -192,8 +192,8 @@ export default function Main(props) {
     customPaging: (i) => (
       <div
         style={{
-          width: "20px",
-          height: "20px",
+          width: "15px",
+          height: "15px",
           borderRadius: "50%",
           border: "2px solid #fff",
         }}
