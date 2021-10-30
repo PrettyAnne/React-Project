@@ -1,0 +1,26 @@
+[
+  {
+    "id":"1banner",
+    "name":"오감만족 할로윈 맨션",
+    "thumbUrl":"https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/39fbfe0158db1a8e59c11eb512dea503_54952.jpg",
+    "url":"/slideBanner/1"
+  },
+  {
+    "id":"2banner",
+    "name":"젤러쉬 챌린저스",
+    "thumbUrl":"https://www.lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/c603ebc8eebee8222751ea17b696ad85_58771.jpg",
+    "url":"/slideBanner/2"
+  },
+  {
+    "id":"3banner",
+    "name":"일찍 찾아온 크리스마스",
+    "thumbUrl":"https://www.lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/070251f41882f6b3ca199c2de70a49fb_61190.jpg",
+    "url":"/slideBanner/3"
+  },
+  {
+    "id":"4banner",
+    "name":"다운로드 러쉬 10월",
+    "thumbUrl":"https://www.lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/712ea732bebad161d567c873616e126c_89743.jpg",
+    "url":"/slideBanner/4"
+  }
+]

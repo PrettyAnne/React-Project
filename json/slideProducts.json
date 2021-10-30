@@ -1,0 +1,99 @@
+[
+  {
+    "id": "1",
+    "name": "매직 크리스탈스 300g/600g",
+    "tag": "#스크럽 #민트의마법 #시원해져라",
+    "price": 32000,
+    "thumbUrl":
+      "https://lush.co.kr/data/goods/18/11/48/1000000026/1000000026_main_03.jpg",
+    "url": "/MagicCrystals"
+  },
+  {
+    "id": "2",
+    "name": "카타스트로피 코스메틱",
+    "tag": "#블루베리의촉촉함 #슈퍼푸드블루베리",
+    "price": 25000,
+    "thumbUrl": "https://lush.co.kr/data/goods/11/01/20/76/76_main_063.jpg",
+    "url": "/product/2"
+  },
+  {
+    "id":"3",
+    "name":"마스크 오브 매그너민티 125g/315g",
+    "tag":"#꿀의촉촉함 #데일리팩 #민트팩",
+    "price":20000,
+    "thumbUrl":"https://lush.co.kr/data/goods/12/03/07/97/97_main_074.jpg",
+    "url":"/product/3"
+  },
+  {
+    "id":"4",
+    "name":"더 올리브 브렌치 100g/250g/500g",
+    "tag":"#오일듬뿍샤워젤 #보습샤워시작",
+    "price":17000,
+    "thumbUrl":"https://lush.co.kr/data/goods/17/11/01/342/342_main_041.jpg",
+    "url":"/product/4"
+  },
+  {
+    "id":"5",
+    "name":"더티 보디 스프레이",
+    "tag":"#스테디셀러 #뒤돌아보는향 #재구매각",
+    "price":50000,
+    "thumbUrl":"https://lush.co.kr/data/goods/17/08/16/246/246_main_022.jpg",
+    "url":"/product/5"
+  },
+  {
+    "id":"6",
+    "name":"대디-오",
+    "tag":"#오래머무는잔향 #베스트샴푸",
+    "price":19000,
+    "thumbUrl":"https://lush.co.kr/data/goods/11/01/20/15/15_main_074.jpg",
+    "url":"/product/6"
+  },
+  {
+    "id":"7",
+    "name":"뉴",
+    "tag":"#착한고체샴푸 #뿌리튼튼",
+    "price":18000,
+    "thumbUrl":"https://lush.co.kr/data/goods/17/05/30/241/241_main_049.jpg",
+    "url":"/product/7"
+  },
+  {
+    "id":"8",
+    "name":"코스메틱 워리어",
+    "tag":"#피부야달래줄게 #입소문템 #에그프리",
+    "price":25000,
+    "thumbUrl":"https://lush.co.kr/data/goods/11/01/20/79/79_main_023.jpg",
+    "url":"/product/8"
+  },
+  {
+    "id":"9",
+    "name":"돈트 룩 앳 미",
+    "tag":"#프레쉬마스크 #상큼한레몬팩 #쌀알갱이",
+    "price":25000,
+    "thumbUrl":"https://lush.co.kr/data/goods/16/07/06/215/215_main_043.jpg",
+    "url":"/product/9"
+  },
+  {
+    "id":"10",
+    "name":"씨 베지터블",
+    "tag":"#솝 #바다의청량함을그대로",
+    "price":10000,
+    "thumbUrl":"https://lush.co.kr/data/goods/11/01/19/9/9_main_039.jpg",
+    "url":"/product/10"
+  },
+  {
+    "id":"11",
+    "name":"럽 럽 럽 300g/600g",
+    "tag":"#샤워스크럽 #구석구석소금롤링",
+    "price":30000,
+    "thumbUrl":"https://lush.co.kr/data/goods/11/08/03/93/93_main_082.png",
+    "url":"/product/11"
+  },
+  {
+    "id":"12",
+    "name":"섹스 밤",
+    "tag":"#로맨틱 #섹시한밤 #일랑일랑꽃",
+    "price":12000,
+    "thumbUrl":"https://lush.co.kr/data/goods/11/01/20/41/41_main_030.jpg",
+    "url":"/product/12"
+  }
+]

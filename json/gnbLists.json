@@ -1,0 +1,344 @@
+[
+  {
+    "name": "베스트",
+    "lists": [
+      {
+        "name":"주간 베스트",
+        "url": "/category/1"
+      },
+      {
+        "name": "별 다섯개 후기",
+        "url": "/category/2"
+      },
+      {
+        "name": "온라인 전용",
+        "url": "/category/3"
+      },
+      {
+        "name": "국내제조",
+        "url": "/category/5"
+      },
+      {
+        "name": "네이키드",
+        "url": "/category/6"
+      },
+      {
+        "name": "여름 쿨링템",
+        "url": "/category/7"
+      }
+    ]
+  },
+
+  {
+    "name": "신제품",
+    "lists": [
+      {
+        "name": "퍼퓸 디스커버리 기프트",
+        "url": "/category/8"
+      },
+      {
+        "name": "비건 메이크업",
+        "url": "/category/9"
+      },
+      {
+        "name": "기프트",
+        "url": "/category/10"
+      },
+      {
+        "name": "립스틱",
+        "url": "/category/11"
+      }
+    ]
+  },
+
+  {
+    "name": "베쓰",
+    "lists": [
+      {
+        "name": "베쓰 밤",
+        "url": "/category/12"
+      },
+      {
+        "name": "버블 바",
+        "url": "/category/13"
+      },
+      {
+        "name": "베쓰 오일",
+        "url": "/category/14"
+      },
+      {
+        "name": "펀",
+        "url": "/category/15"
+      }
+    ]
+  },
+
+  {
+    "name": "샤워",
+    "lists": [
+      {
+        "name": "솝",
+        "url": "/category/16"
+      },
+      {
+        "name": "샤워 젤&젤리",
+        "url": "/category/17"
+      },
+      {
+        "name": "보디 컨디셔너",
+        "url": "/category/18"
+      },
+      {
+        "name": "샤워 밤",
+        "url": "/category/19"
+      },
+      {
+        "name": "샤워 오일",
+        "url": "/category/20"
+      },
+      {
+        "name": "스크럽&버터",
+        "url": "/category/21"
+      },
+      {
+        "name": "펀",
+        "url": "/category/22"
+      }
+    ]
+  },
+
+  {
+    "name": "보디",
+    "lists": [
+      {
+        "name": "클렌저",
+        "url": "/category/23"
+      },
+      {
+        "name": "로션",
+        "url": "/category/24"
+      },
+      {
+        "name": "핸드 앤 풋",
+        "url": "/category/25"
+      },
+      {
+        "name": "마사지 바",
+        "url": "/category/26"
+      },
+      {
+        "name": "더스팅 파우더",
+        "url": "/category/27"
+      },
+      {
+        "name": "쉐이빙 크림",
+        "url": "/category/28"
+      }
+    ]
+  },
+
+  {
+    "name": "페이스",
+    "lists": [
+      {
+        "name": "클렌저",
+        "url": "/category/29"
+      },
+      {
+        "name": "페이스 마스크",
+        "url": "/category/30"
+      },
+      {
+        "name": "토너",
+        "url": "/category/31"
+      },
+      {
+        "name": "모이스춰라이저",
+        "url": "/category/32"
+      },
+      {
+        "name": "프라이머",
+        "url": "/category/33"
+      },
+      {
+        "name": "립",
+        "url": "/category/34"
+      },
+      {
+        "name": "쉐이빙 크림",
+        "url": "/category/35"
+      }
+    ]
+  },
+
+  {
+    "name": "헤어",
+    "lists": [
+      {
+        "name": "샴푸 바",
+        "url": "/category/36"
+      },
+      {
+        "name": "샴푸",
+        "url": "/category/37"
+      },
+      {
+        "name": "컨디셔너",
+        "url": "/category/38"
+      },
+      {
+        "name": "트리트먼트",
+        "url": "/category/39"
+      },
+      {
+        "name": "스타일링",
+        "url": "/category/40"
+      }
+    ]
+  },
+
+  {
+    "name": "메이크업",
+    "lists": [
+      {
+        "name": "페이스 파우더",
+        "url": "/category/41"
+      },
+      {
+        "name": "아이 메이크업",
+        "url": "/category/42"
+      },
+      {
+        "name": "립",
+        "url": "/category/43"
+      },
+      {
+        "name": "파운데이션",
+        "url": "/category/44"
+      },
+      {
+        "name": "스킨 틴트",
+        "url": "/category/45"
+      },
+      {
+        "name": "비건 브러쉬",
+        "url": "/category/46"
+      }
+    ]
+  },
+
+  {
+    "name": "퍼퓸",
+    "lists": [
+      {
+        "name": "보디 스프레이",
+        "url": "/category/47"
+      },
+      {
+        "name": "퍼퓸 라이브러리",
+        "url": "/category/48"
+      },
+      {
+        "name": "코어 레인지",
+        "url": "/category/49"
+      },
+      {
+        "name": "솔리드 퍼퓸",
+        "url": "/category/50"
+      },
+      {
+        "name": "워시카드",
+        "url": "/category/51"
+      },
+      {
+        "name": "퍼퓸 낫랩",
+        "url": "/category/52"
+      },
+      {
+        "name": "르네상스 퍼퓸",
+        "url": "/category/53"
+      }
+    ]
+  },
+
+  {
+    "name": "기프트",
+    "lists": [
+      {
+        "name": "기프트 베스트",
+        "url": "/category/54"
+      },
+      {
+        "name": "1-3만원대",
+        "url": "/category/55"
+      },
+      {
+        "name": "4-6만원대",
+        "url": "/category/56"
+      },
+      {
+        "name": "7만원 이상",
+        "url": "/category/57"
+      },
+      {
+        "name": "낫랩",
+        "url": "/category/58"
+      },
+      {
+        "name": "스웨그",
+        "url": "/category/59"
+      },
+      {
+        "name": "악세사리",
+        "url": "/category/60"
+      },
+      {
+        "name": "북",
+        "url": "/category/61"
+      }
+    ]
+  },
+
+  {
+    "name": "비건",
+    "lists": [
+      {
+        "name": "베쓰",
+        "url": "/category/62"
+      },
+      {
+        "name": "샤워",
+        "url": "/category/63"
+      },
+      {
+        "name": "보디",
+        "url": "/category/64"
+      },
+      {
+        "name": "페이스",
+        "url": "/category/65"
+      },
+      {
+        "name": "헤어",
+        "url": "/category/66"
+      },
+      {
+        "name": "메이크업",
+        "url": "/category/67"
+      },
+      {
+        "name": "퍼퓸",
+        "url": "/category/68"
+      }
+    ]
+  }
+
+
+
+
+
+
+
+
+
+]
