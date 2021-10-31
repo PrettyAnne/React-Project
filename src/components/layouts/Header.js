@@ -312,14 +312,14 @@ export default function Header() {
   const [infoLists, setInfoLists] = useState([]);
   const testRef = useRef();
   useEffect(function () {
-    fetch('http://localhost:3000/json/gnbLists.json').then(function (res) {
+    fetch('/React-Project/json/gnbLists.json').then(function (res) {
       res.json().then(function (json) {
         setGnbLists(json);
       }).catch(function (e) {
       });
     });
 
-    fetch('http://localhost:3000/json/infoLists.json').then(function (res) {
+    fetch('/React-Project/json/infoLists.json').then(function (res) {
       res.json().then(function (json) {
         setInfoLists(json);
       }).catch(function (e) {
@@ -356,7 +356,7 @@ export default function Header() {
                               data.lists.map(function (detData) {
                                 return (
                                   <li>
-                                    <Link to={data.url}>
+                                    <Link to={detData.url}>
                                       {detData.name}
                                     </Link>
                                   </li>

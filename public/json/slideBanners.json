@@ -1,11 +1,5 @@
 [
   {
-    "id":"1banner",
-    "name":"오감만족 할로윈 맨션",
-    "thumbUrl":"https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/39fbfe0158db1a8e59c11eb512dea503_54952.jpg",
-    "url":"/slideBanner/1"
-  },
-  {
     "id":"2banner",
     "name":"젤러쉬 챌린저스",
     "thumbUrl":"https://www.lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/c603ebc8eebee8222751ea17b696ad85_58771.jpg",

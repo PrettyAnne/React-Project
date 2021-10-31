@@ -3,13 +3,14 @@ import Footer from "./layouts/Footer";
 import Main from "../pages/Main";
 import Login from "../pages/Login";
 import MagicCrystals from "../pages/MagicCrystals";
+import Category from "../pages/Category";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./layouts/ScrollToTop";
 
 export default function Index() {
   return (
-    <Router>
+    <Router basename="/React-Project">
       <Header />
       <Switch>
         <Route exact path="/">
@@ -21,7 +22,11 @@ export default function Index() {
         </Route>
         <Route path="/MagicCrystals">
           <ScrollToTop />
-          <MagicCrystals />
+          <MagicCrystals user="user"/>
+        </Route>
+        <Route path="/category">
+          <ScrollToTop />
+          <Category />
         </Route>
       </Switch>
       <Footer />

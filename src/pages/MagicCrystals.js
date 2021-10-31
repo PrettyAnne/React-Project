@@ -804,6 +804,9 @@ section h4 {
 `;
 
 export default function MagicCrystals() {
+  useEffect(() => { 
+  }, []);
+
   // let { productId } = useParams();
   // useEffect(() => {
   //   fetch(`/product/${productId}`)

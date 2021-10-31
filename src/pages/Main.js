@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -14,6 +14,8 @@ import covid from "../images/content2-banner4.jpg";
 import tangleTreatment from "../images/content3-banner.gif";
 
 import { useEffect, useState } from "react";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { UserContext } from '../components/store/UserContext';
 
 const MainWrapper = styled.div`
   /* 메인 배너 */
@@ -166,6 +168,9 @@ const MainWrapper = styled.div`
 `;
 
 export default function Main(props) {
+  const user = useRecoilValue(UserContext);
+  const setUser = useSetRecoilState(UserContext);
+  
   const settings = {
     fade: true,
     dots: true,
@@ -263,26 +268,33 @@ export default function Main(props) {
   const [slideReviews, setSlideReviews] = useState([]);
   const [slideBanners, setSlideBanners] = useState([]);
   useEffect(function () {
-    fetch('http://localhost:3000/json/slideProducts.json').then(function (res) {
-      res.json().then(function (json) {
-        setSlideProducts(json);
-      }).catch(function (e) {
-      });
+    fetch("/React-Project/json/slideProducts.json").then(function (res) {
+      res
+        .json()
+        .then(function (json) {
+          setSlideProducts(json);
+        })
+        .catch(function (e) {});
     });
 
-    fetch('http://localhost:3000/json/slideReviews.json').then(function (res) {
-      res.json().then(function (json) {
-        setSlideReviews(json);
-      }).catch(function (e) {
-      });
+    fetch("/React-Project/json/slideReviews.json").then(function (res) {
+      res
+        .json()
+        .then(function (json) {
+          setSlideReviews(json);
+        })
+        .catch(function (e) {});
     });
 
-    fetch('http://localhost:3000/json/slideBanners.json').then(function (res) {
-      res.json().then(function (json) {
-        setSlideBanners(json);
-      }).catch(function (e) {
-      });
+    fetch("/React-Project/json/slideBanners.json").then(function (res) {
+      res
+        .json()
+        .then(function (json) {
+          setSlideBanners(json);
+        })
+        .catch(function (e) {});
     });
+    setUser({...user, username: 'jsh'});
   }, []);
 
   return (
@@ -295,13 +307,14 @@ export default function Main(props) {
               {slideBanners.map(function (data) {
                 return (
                   <div>
-                    <div style={{
-                      backgroundImage: `url(${data.thumbUrl})`,
-                      backgroundPosition: 'center',
-                      backgroundSize: 'cover',
-                      backgroundRepeat: 'no-repeat',
-                      height: '580px'
-                    }}
+                    <div
+                      style={{
+                        backgroundImage: `url(${data.thumbUrl})`,
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat",
+                        height: "580px",
+                      }}
                     >
                       <a href="javascript:void(0)"></a>
                     </div>
@@ -311,6 +324,7 @@ export default function Main(props) {
             </Slider>
           </div>
         </article>
+        {user.username}/{user.age}/{user.gender}
         <section classNameName="myAroma">
           <h3>나만 알고 싶은 향기</h3>
           <div className="product-slide-wrap">
@@ -327,7 +341,9 @@ export default function Main(props) {
                         <br />
                         <span className="second">{data.tag}</span>
                         <br />
-                        <span className="third">\ {data.price.toLocaleString()}</span>
+                        <span className="third">
+                          \ {data.price.toLocaleString()}
+                        </span>
                       </Link>
                     </div>
                   );
