@@ -1,38 +1,84 @@
 [
   {
-    "id": "1",
-    "btn": "new",
-    "name": "뷰티 슬립 125g/315g",
-    "tag": "#아름다움의비결 #골저스한영양 #라벤더",
-    "price": 25000,
-    "thumbUrl": "https://lush.co.kr/data/goods/20/10/43/1000001455/1000001455_main_09.jpg",
-    "url": "prdLists/1"
+    "categoryId": 1,
+    "prdList": [
+      {
+        "id": "1",
+        "btn": "new",
+        "name": "뷰티 슬립 125g/315g",
+        "tag": "#아름다움의비결 #골저스한영양 #라벤더",
+        "price": 25000,
+        "thumbUrl": "/1000001455_main_09.jpg",
+        "url": "prdLists/1"
+      },
+      {
+        "id": "2",
+        "btn": "국내제조",
+        "name": "마스크 오브 매그너민티 125g/315g",
+        "tag": "#꿀의촉촉함 #데일리팩 #민트팩",
+        "price": 20000,
+        "thumbUrl": "https://lush.co.kr/data/goods/12/03/07/97/97_main_074.jpg",
+        "url": "prdLists/2"
+      },
+      {
+        "id": "3",
+        "btn": "VEGAN",
+        "name": "섹스 밤",
+        "tag": "#로맨틱 #섹시한밤 #일랑일랑꽃",
+        "price": 12000,
+        "thumbUrl": "https://lush.co.kr/data/goods/11/01/20/41/41_main_088.jpg",
+        "url": "prdLists/3"
+      },
+      {
+        "id": "4",
+        "btn": "VEGAN",
+        "name": "더티 보디 스프레이",
+        "tag": "#스테디셀러 #뒤돌아보는향 #재구매각",
+        "price": 50000,
+        "thumbUrl": "https://lush.co.kr/data/goods/17/08/16/246/246_main_022.jpg",
+        "url": "prdLists/4"
+      }
+    ]
   },
   {
-    "id": "2",
-    "btn": "국내제조",
-    "name": "마스크 오브 매그너민티 125g/315g",
-    "tag": "#꿀의촉촉함 #데일리팩 #민트팩",
-    "price": 20000,
-    "thumbUrl": "https://lush.co.kr/data/goods/12/03/07/97/97_main_074.jpg",
-    "url": "prdLists/2"
-  },
-  {
-    "id": "3",
-    "btn": "VEGAN",
-    "name": "섹스 밤",
-    "tag": "#로맨틱 #섹시한밤 #일랑일랑꽃",
-    "price": 12000,
-    "thumbUrl": "https://lush.co.kr/data/goods/11/01/20/41/41_main_088.jpg",
-    "url": "prdLists/3"
-  },
-  {
-    "id": "4",
-    "btn": "VEGAN",
-    "name": "더티 보디 스프레이",
-    "tag": "#스테디셀러 #뒤돌아보는향 #재구매각",
-    "price": 50000,
-    "thumbUrl": "https://lush.co.kr/data/goods/17/08/16/246/246_main_022.jpg",
-    "url": "prdLists/4"
+    "categoryId": 2,
+    "prdList": [
+      {
+        "id": "1",
+        "btn": "new",
+        "name": "뷰티 슬립 125g/315g",
+        "tag": "#아름다움의비결 #골저스한영양 #라벤더",
+        "price": 25000,
+        "thumbUrl": "https://lush.co.kr/data/goods/20/10/43/1000001455/1000001455_main_09.jpg",
+        "url": "prdLists/1"
+      },
+      {
+        "id": "2",
+        "btn": "국내제조",
+        "name": "마스크 오브 매그너민티 125g/315g",
+        "tag": "#꿀의촉촉함 #데일리팩 #민트팩",
+        "price": 20000,
+        "thumbUrl": "https://lush.co.kr/data/goods/12/03/07/97/97_main_074.jpg",
+        "url": "prdLists/2"
+      },
+      {
+        "id": "3",
+        "btn": "VEGAN",
+        "name": "섹스 밤",
+        "tag": "#로맨틱 #섹시한밤 #일랑일랑꽃",
+        "price": 12000,
+        "thumbUrl": "https://lush.co.kr/data/goods/11/01/20/41/41_main_088.jpg",
+        "url": "prdLists/3"
+      },
+      {
+        "id": "4",
+        "btn": "VEGAN",
+        "name": "더티 보디 스프레이",
+        "tag": "#스테디셀러 #뒤돌아보는향 #재구매각",
+        "price": 50000,
+        "thumbUrl": "https://lush.co.kr/data/goods/17/08/16/246/246_main_022.jpg",
+        "url": "prdLists/4"
+      }
+    ]
   }
 ]

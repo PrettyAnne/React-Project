@@ -34,7 +34,7 @@ import iconCamera from "../images/icon_camera.png";
 import { useParams } from "react-router";
 import { useEffect } from "react";
 
-const MagicCrystalsWrapper = styled.div`
+const ProductWrapper = styled.div`
 /* 매직크리스탈스 메인 */
 .product-intro-wrap {
   display: flex;
@@ -803,8 +803,9 @@ section h4 {
 }
 `;
 
-export default function MagicCrystals() {
-  useEffect(() => { 
+export default function Product() {
+  const { prdId } = useParams();
+  useEffect(() => {
   }, []);
 
   // let { productId } = useParams();
@@ -812,7 +813,7 @@ export default function MagicCrystals() {
   //   fetch(`/product/${productId}`)
   // }, []);
   return (
-    <MagicCrystalsWrapper>
+    <ProductWrapper>
       <main>
         <div className="product-intro-wrap">
           <div className="intro-left">
@@ -1016,7 +1017,7 @@ export default function MagicCrystals() {
               </p>
               <span>
                 #비건화장품 #블랙팟의환생 #샤워스크럽<br />
-                #MagicCrystals #ShowerScrub #매직크리스탈스
+                #Product #ShowerScrub #매직크리스탈스
               </span>
             </div>{/* product-image3-desc */}
           </div>
@@ -1273,6 +1274,6 @@ export default function MagicCrystals() {
           </div>
         </div>
       </section>
-    </MagicCrystalsWrapper>
+    </ProductWrapper>
   );
 }

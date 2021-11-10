@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 const CategoryWrapper = styled.div`
@@ -58,18 +59,19 @@ const CategoryWrapper = styled.div`
   }
 `;
 
-export default function Category(props) {
-  const [prdLists, setPrdLists] = useState([]);
 
+export default function Category() {
+  const { categoryId } = useParams();
+  
+  const [prdLists, setPrdLists] = useState([]);
   useEffect(function () {
     fetch('/React-Project/json/prdLists.json').then(function (res) {
       res.json().then(function (json) {
-        setPrdLists(json);
+        setPrdLists(json.find(value => value.categoryId + '' == categoryId).prdList);
       }).catch(function (e) {
       });
-    });
-
-  });
+    });  
+  }, []);
 
   return (
     <CategoryWrapper>
