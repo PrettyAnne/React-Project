@@ -1,9 +1,9 @@
 import Header from "./layouts/header/Header";
-import Footer from "./layouts/Footer";
-import Main from "../pages/Main";
-import Login from "../pages/Login";
-import Product from "../pages/Product";
-import Category from "../pages/Category";
+import Footer from "./layouts/footer/Footer";
+import Main from "../pages/main/Main";
+import Login from "../pages/login/Login";
+import Product from "../pages/product/Product";
+import Category from "../pages/category/Category";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./layouts/ScrollToTop";

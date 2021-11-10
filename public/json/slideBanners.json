@@ -1,20 +1,32 @@
 [
   {
+    "id":"1banner",
+    "name":"윈터 타임즈",
+    "thumbUrl":"https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/da65571ac44227749982074ab80fc24b_23638.jpg",
+    "url":"/slideBanner/1"
+  },
+  {
     "id":"2banner",
-    "name":"젤러쉬 챌린저스",
-    "thumbUrl":"https://www.lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/c603ebc8eebee8222751ea17b696ad85_58771.jpg",
+    "name":"겨울을 기다렸어요!",
+    "thumbUrl":"https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/5bb7860a8a9f028960a179d4ef3ca106_81183.jpg",
     "url":"/slideBanner/2"
   },
   {
     "id":"3banner",
-    "name":"일찍 찾아온 크리스마스",
-    "thumbUrl":"https://www.lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/070251f41882f6b3ca199c2de70a49fb_61190.jpg",
+    "name":"조금 새로운 겨울 준비",
+    "thumbUrl":"https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/d00fdc84e1ac64b1d113e0de7167addf_59738.jpg",
     "url":"/slideBanner/3"
   },
   {
     "id":"4banner",
-    "name":"다운로드 러쉬 10월",
-    "thumbUrl":"https://www.lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/712ea732bebad161d567c873616e126c_89743.jpg",
+    "name":"마음을 전하고 싶은 지금",
+    "thumbUrl":"https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/4f59838fbc041e013ea81b56949e542a_28336.jpg",
     "url":"/slideBanner/4"
+  },
+  {
+    "id":"5banner",
+    "name":"일찍 찾아온 크리스마스",
+    "thumbUrl":"https://lush.co.kr/data/skin/front/howling/img/banner/slider_3305991155/070251f41882f6b3ca199c2de70a49fb_61190.jpg",
+    "url":"/slideBanner/5"
   }
 ]

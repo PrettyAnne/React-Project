@@ -35,9 +35,9 @@ export default function Header() {
 
   return (
       <header>
-        <div className={styles.header-wrap}>
+        <div className={styles["header-wrap"]}>
           <h1>러쉬</h1>
-          <div className={styles.header-logo}>
+          <div className={styles["header-logo"]}>
             <Link to="/">
               <img src={headerLogo} alt="러쉬" />
             </Link>
@@ -45,7 +45,7 @@ export default function Header() {
           {/* header-logo */}
           <nav>
             <h2>러쉬 메뉴</h2>
-            <div className={styles.header-nav}>
+            <div className={styles["header-nav"]}>
               <ul className={styles.gnb1step}>
                 <li>
                   <a href="javascript:void(0)">제품</a>
@@ -54,7 +54,7 @@ export default function Header() {
                       return (
                         <li>
                           <a href="javascript:void(0)">{data.name}</a>
-                          <ul className={`${styles.gnb} ${styles.gnb2step-1}`}>
+                          <ul className={`${styles.gnb} ${styles["gnb2step-1"]}`}>
                             {data.lists &&
                               data.lists.map(function (detData) {
                                 return (
@@ -78,7 +78,7 @@ export default function Header() {
                       return (
                         <li>
                           <a href="javascript:void(0)">{data.name}</a>
-                          <ul className={`${styles.gnb} ${styles.gnb2step-1}`}>
+                          <ul className={`${styles.gnb} ${styles["gnb2step-1"]}`}>
                             {data.lists &&
                               data.lists.map(function (detData) {
                                 return (
@@ -108,7 +108,7 @@ export default function Header() {
             </div>
             {/* header-menu */}
           </nav>
-          <div className={styles.header-icon}>
+          <div className={styles["header-icon"]}>
             <button
               type="button"
               className={styles.schBtn}
@@ -131,7 +131,7 @@ export default function Header() {
                   &times;
                 </button>
 
-                <div className={styles.overlay-content}>
+                <div className={styles["overlay-content"]}>
                   <form action="#" method="GET">
                     <label htmlFor="searchBox"></label>
                     <input
@@ -181,8 +181,8 @@ export default function Header() {
 
             <button type="button" className={styles.mpgBtn} aria-label="마이페이지">
               <img src={headerIconMypage} alt="마이페이지" />
-              <div className={styles.mpg-drop}>
-                <ul className={styles.mpg-drop-inner}>
+              <div className={styles["mpg-drop"]}>
+                <ul className={styles["mpg-drop-inner"]}>
                   <li>
                     <Link to="/Login">로그인</Link>
                   </li>

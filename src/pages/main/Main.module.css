@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+  /* 메인 배너 */
+  .main-banner {
+    position: relative;
+    min-width: 1280px;
+    height: 580px;
+  }
+
+  .main-banner a {
+    display: block;
+    min-width: 1280px;
+    height: 580px;
+  }
+
+  .bannerIcon li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .main-banner .slick-active div {
+    background-color: #fff;
+  }
+
+  /* 나만 알고싶은향기 wrap */
+  .myAroma {
+    position: relative;
+  }
+
+  .myAroma::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /* 제품 슬라이더 */
+  .product-slide-wrap {
+    width: 1000px;
+    min-width: 1000px;
+    padding: 80px 0 120px;
+  }
+
+  .product-slide-wrap img {
+    margin-left: 40px;
+  }
+
+  .product-slide-wrap .product-slide img {
+    width: 270px;
+  }
+
+  .product-slide-wrap .product-slide {
+    display: block;
+    padding: 0 30px;
+  }
+
+  .first {
+    font-size: 18px;
+    color: #333;
+  }
+  .second {
+    font-size: 14px;
+    color: #8f8f8f;
+  }
+  .third {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .product-slide-wrap .product-slide .slick-dots .slick-active div {
+    background-color: #000;
+  }
+
+  /* 사이드 리뷰 슬라이더 */
+  .product-slide-reviewwrap {
+    width: 300px;
+    position: absolute;
+    top: -80px;
+    right: 0;
+  }
+
+  .product-slide-reviewwrap .slick-dots .slick-active div {
+    background-color: #000;
+  }
+
+  /* 안내배너 */
+  .info-wrap {
+    display: flex;
+    padding: 100px 0;
+  }
+
+  .info-wrap img {
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  .info-wrap a {
+    display: inline-block;
+  }
+
+  .info-wrap-left {
+    flex-direction: row;
+  }
+
+  .info-wrap-right {
+    flex-direction: row;
+  }
+
+  .info-wrap-right-top {
+    height: 50%;
+  }
+
+  .info-wrap-right-bottom {
+    display: flex;
+    height: 50%;
+  }
+
+  .info-wrap-right-bottom-left {
+    flex-direction: row;
+  }
+
+  .info-wrap-right-bottom-right {
+    flex-direction: row;
+  }
+
+  /* 탱글드 어쩌고 */
+  .newprod-adv-wrap {
+    display: flex;
+    min-width: 1280px;
+    height: 700px;
+    padding: 40px 100px 0 300px;
+  }
+
+  .newprod-adv-wrap .newprod-adv-text {
+    margin-right: 40px;
+    padding-top: 130px;
+  }
+
+  .newprod-adv-wrap .newprod-adv-text strong {
+    display: inline-block;
+    font-size: 42px;
+    padding: 0 0 20px;
+    letter-spacing: -3px;
+  }
+
+  .newprod-adv-wrap .newprod-adv-text p {
+    display: block;
+    color: #333;
+  }

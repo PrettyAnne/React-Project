@@ -4,168 +4,18 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { Link } from "react-router-dom";
 
-import styled from "styled-components";
+import styles from './Main.module.css';
 
-import titleImg from "../images/content2-title.png";
-import consTantin from "../images/content2-banner1.jpg";
-import saltScrub from "../images/content2-banner2.gif";
-import summerIce from "../images/content2-banner3.jpg";
-import covid from "../images/content2-banner4.jpg";
-import tangleTreatment from "../images/content3-banner.gif";
+import titleImg from "../../images/content2-title.png";
+import consTantin from "../../images/content2-banner1.jpg";
+import saltScrub from "../../images/content2-banner2.gif";
+import summerIce from "../../images/content2-banner3.jpg";
+import covid from "../../images/content2-banner4.jpg";
+import tangleTreatment from "../../images/content3-banner.gif";
 
 import { useEffect, useState } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { UserContext } from '../components/store/UserContext';
-
-const MainWrapper = styled.div`
-  /* 메인 배너 */
-  .main-banner {
-    position: relative;
-    min-width: 1280px;
-    height: 580px;
-  }
-
-  .main-banner a {
-    display: block;
-    min-width: 1280px;
-    height: 580px;
-  }
-
-  .bannerIcon li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .main-banner .slick-active div {
-    background-color: #fff;
-  }
-
-  /* 나만 알고싶은향기 wrap */
-  .myAroma {
-    position: relative;
-  }
-
-  .myAroma::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-
-  /* 제품 슬라이더 */
-  .product-slide-wrap {
-    width: 1000px;
-    min-width: 1000px;
-    padding: 80px 0 120px;
-  }
-
-  .product-slide-wrap img {
-    margin-left: 40px;
-  }
-
-  .product-slide-wrap .product-slide img {
-    width: 270px;
-  }
-
-  .product-slide-wrap .product-slide {
-    display: block;
-    padding: 0 30px;
-  }
-
-  .first {
-    font-size: 18px;
-    color: #333;
-  }
-  .second {
-    font-size: 14px;
-    color: #8f8f8f;
-  }
-  .third {
-    font-size: 16px;
-    color: #333;
-    font-weight: bold;
-  }
-
-  .product-slide-wrap .product-slide .slick-dots .slick-active div {
-    background-color: #000;
-  }
-
-  /* 사이드 리뷰 슬라이더 */
-  .product-slide-reviewwrap {
-    width: 300px;
-    position: absolute;
-    top: 642px;
-    right: 0;
-  }
-
-  .product-slide-reviewwrap .slick-dots .slick-active div {
-    background-color: #000;
-  }
-
-  /* 안내배너 */
-  .info-wrap {
-    display: flex;
-    padding: 100px 0;
-  }
-
-  .info-wrap img {
-    width: 100%;
-    vertical-align: middle;
-  }
-
-  .info-wrap a {
-    display: inline-block;
-  }
-
-  .info-wrap-left {
-    flex-direction: row;
-  }
-
-  .info-wrap-right {
-    flex-direction: row;
-  }
-
-  .info-wrap-right-top {
-    height: 50%;
-  }
-
-  .info-wrap-right-bottom {
-    display: flex;
-    height: 50%;
-  }
-
-  .info-wrap-right-bottom-left {
-    flex-direction: row;
-  }
-
-  .info-wrap-right-bottom-right {
-    flex-direction: row;
-  }
-
-  /* 탱글드 어쩌고 */
-  .newprod-adv-wrap {
-    display: flex;
-    min-width: 1280px;
-    height: 700px;
-    padding: 40px 100px 0 300px;
-  }
-
-  .newprod-adv-wrap .newprod-adv-text {
-    margin-right: 40px;
-    padding-top: 130px;
-  }
-
-  .newprod-adv-wrap .newprod-adv-text strong {
-    display: inline-block;
-    font-size: 42px;
-    padding: 0 0 20px;
-    letter-spacing: -3px;
-  }
-
-  .newprod-adv-wrap .newprod-adv-text p {
-    display: block;
-    color: #333;
-  }
-`;
+import { UserContext } from '../../components/store/UserContext';
 
 export default function Main(props) {
   const user = useRecoilValue(UserContext);
@@ -191,7 +41,7 @@ export default function Main(props) {
           height: "fit-content",
         }}
       >
-        <ul className="bannerIcon"> {dots} </ul>
+        <ul className={styles.bannerIcon}> {dots} </ul>
       </div>
     ),
     customPaging: (i) => (
@@ -298,11 +148,10 @@ export default function Main(props) {
   }, []);
 
   return (
-    <MainWrapper>
       <main>
         <article>
           <h3>메인 광고 배너</h3>
-          <div className="main-banner">
+          <div className={styles["main-banner"]}>
             <Slider {...settings}>
               {slideBanners.map(function (data) {
                 return (
@@ -325,11 +174,11 @@ export default function Main(props) {
           </div>
         </article>
         {user.username}/{user.age}/{user.gender}
-        <section className="myAroma">
+        <section className={styles.myAroma}>
           <h3>나만 알고 싶은 향기</h3>
-          <div className="product-slide-wrap">
+          <div className={styles["product-slide-wrap"]}>
             <img src={titleImg} alt="나만 알고 싶은 향기" />
-            <div className="product-slide">
+            <div className={styles["product-slide"]}>
               <Slider {...settingsProduct}>
                 {slideProducts.map(function (data) {
                   return (
@@ -337,11 +186,11 @@ export default function Main(props) {
                       <Link to={data.url}>
                         <img src={data.thumbUrl} alt={data.name} />
                         <br />
-                        <span className="first">{data.name}</span>
+                        <span className={styles.first}>{data.name}</span>
                         <br />
-                        <span className="second">{data.tag}</span>
+                        <span className={styles.second}>{data.tag}</span>
                         <br />
-                        <span className="third">
+                        <span className={styles.third}>
                           \ {data.price.toLocaleString()}
                         </span>
                       </Link>
@@ -353,7 +202,7 @@ export default function Main(props) {
             {/* product-slide */}
           </div>
           {/* product-slide-wrap */}
-          <div className="product-slide-reviewwrap">
+          <div className={styles["product-slide-reviewwrap"]}>
             <Slider {...settingsReview}>
               {slideReviews.map(function (data) {
                 return (
@@ -370,8 +219,8 @@ export default function Main(props) {
         </section>
         <section>
           <h4>소식, 제품소개, 이벤트, 공지사항</h4>
-          <div className="info-wrap">
-            <div className="info-wrap-left">
+          <div className={styles["info-wrap"]}>
+            <div className={styles["info-wrap-left"]}>
               <a href="javascript:void(0)">
                 <img
                   src={consTantin}
@@ -380,21 +229,21 @@ export default function Main(props) {
               </a>
             </div>
             {/* info-wrap-left */}
-            <div className="info-wrap-right">
-              <div className="info-wrap-right-top">
+            <div className={styles["info-wrap-right"]}>
+              <div className={styles["info-wrap-right-top"]}>
                 <a href="javascript:void(0)">
                   <img src={saltScrub} alt="부드럽게 소금 롤링 스크럽" />
                 </a>
               </div>
               {/* info-wrap-right-top */}
-              <div className="info-wrap-right-bottom">
-                <div className="info-wrap-right-bottom-left">
+              <div className={styles["info-wrap-right-bottom"]}>
+                <div className={styles["info-wrap-right-bottom-left"]}>
                   <a href="javascript:void(0)">
                     <img src={summerIce} alt="EVENT 꽁꽁! 무더위를 얼리다" />
                   </a>
                 </div>
                 {/* info-wrap-right-bottom-left */}
-                <div className="info-wrap-right-bottom-right">
+                <div className={styles["info-wrap-right-bottom-right"]}>
                   <a href="javascript:void(0)">
                     <img
                       src={covid}
@@ -412,8 +261,8 @@ export default function Main(props) {
         </section>
         <section>
           <h4>신제품 광고</h4>
-          <div className="newprod-adv-wrap">
-            <div className="newprod-adv-text">
+          <div className={styles["newprod-adv-wrap"]}>
+            <div className={styles["newprod-adv-text"]}>
               <strong>
                 NEW 탱글드 헤어 <br />
                 트리트 먼트
@@ -430,6 +279,5 @@ export default function Main(props) {
           {/* newprod-adv-wrap */}
         </section>
       </main>
-    </MainWrapper>
   );
 }
