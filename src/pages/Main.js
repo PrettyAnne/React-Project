@@ -325,7 +325,7 @@ export default function Main(props) {
           </div>
         </article>
         {user.username}/{user.age}/{user.gender}
-        <section classNameName="myAroma">
+        <section className="myAroma">
           <h3>나만 알고 싶은 향기</h3>
           <div className="product-slide-wrap">
             <img src={titleImg} alt="나만 알고 싶은 향기" />

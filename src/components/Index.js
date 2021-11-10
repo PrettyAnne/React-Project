@@ -1,8 +1,8 @@
-import Header from "./layouts/Header";
+import Header from "./layouts/header/Header";
 import Footer from "./layouts/Footer";
 import Main from "../pages/Main";
 import Login from "../pages/Login";
-import MagicCrystals from "../pages/MagicCrystals";
+import Product from "../pages/Product";
 import Category from "../pages/Category";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -20,11 +20,11 @@ export default function Index() {
         <ScrollToTop />
           <Login />
         </Route>
-        <Route path="/MagicCrystals">
+        <Route path="/product/:prdId">
           <ScrollToTop />
-          <MagicCrystals user="user"/>
+          <Product user="user"/>
         </Route>
-        <Route path="/category">
+        <Route path="/category/:categoryId">
           <ScrollToTop />
           <Category />
         </Route>
