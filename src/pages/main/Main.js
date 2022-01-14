@@ -118,11 +118,11 @@ export default function Main(props) {
   const [slideReviews, setSlideReviews] = useState([]);
   const [slideBanners, setSlideBanners] = useState([]);
   useEffect(function () {
-    fetch("/React-Project/json/slideProducts.json").then(function (res) {
+    fetch(`https://react-board-exercise-api.herokuapp.com/api/lush/mainProduct?page=1&countPerPage=1`).then(function (res) {
       res
         .json()
         .then(function (json) {
-          setSlideProducts(json);
+          setSlideProducts(json.list);
         })
         .catch(function (e) {});
     });
@@ -136,11 +136,11 @@ export default function Main(props) {
         .catch(function (e) {});
     });
 
-    fetch("/React-Project/json/slideBanners.json").then(function (res) {
+    fetch(`https://react-board-exercise-api.herokuapp.com/api/lush/mainBanner?page=1&countPerPage=5`).then(function (res) {
       res
         .json()
         .then(function (json) {
-          setSlideBanners(json);
+          setSlideBanners(json.list);
         })
         .catch(function (e) {});
     });
@@ -173,7 +173,6 @@ export default function Main(props) {
             </Slider>
           </div>
         </article>
-        {user.username}/{user.age}/{user.gender}
         <section className={styles.myAroma}>
           <h3>나만 알고 싶은 향기</h3>
           <div className={styles["product-slide-wrap"]}>
@@ -183,7 +182,7 @@ export default function Main(props) {
                 {slideProducts.map(function (data) {
                   return (
                     <div>
-                      <Link to={data.url}>
+                      <Link to={data.thumbUrl}>
                         <img src={data.thumbUrl} alt={data.name} />
                         <br />
                         <span className={styles.first}>{data.name}</span>
