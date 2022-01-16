@@ -158,7 +158,7 @@ export default function Main(props) {
                   <div>
                     <div
                       style={{
-                        backgroundImage: `url(${data.thumbUrl})`,
+                        backgroundImage: `url(${data.thumb_url})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
@@ -182,8 +182,8 @@ export default function Main(props) {
                 {slideProducts.map(function (data) {
                   return (
                     <div>
-                      <Link to={data.thumbUrl}>
-                        <img src={data.thumbUrl} alt={data.name} />
+                      <Link to={data.thumb_url}>
+                        <img src={data.thumb_url} alt={data.name} />
                         <br />
                         <span className={styles.first}>{data.name}</span>
                         <br />

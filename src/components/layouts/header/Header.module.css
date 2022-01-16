@@ -130,6 +130,7 @@
 
   .gnb3step {
     display: none;
+    width: 100%;
     min-width: 1280px;
     background-color: #333;
     position: absolute;

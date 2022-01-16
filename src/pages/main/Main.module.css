@@ -86,6 +86,7 @@
   /* 안내배너 */
   .info-wrap {
     display: flex;
+    justify-content: center;
     padding: 100px 0;
   }
 
