@@ -20,6 +20,10 @@ import { UserContext } from '../../components/store/UserContext';
 export default function Main(props) {
   const user = useRecoilValue(UserContext);
   const setUser = useSetRecoilState(UserContext);
+
+  const [slideProducts, setSlideProducts] = useState([]);
+  const [slideReviews, setSlideReviews] = useState([]);
+  const [slideBanners, setSlideBanners] = useState([]);
   
   const settings = {
     fade: true,
@@ -59,7 +63,6 @@ export default function Main(props) {
   const settingsProduct = {
     dots: true,
     arrows: false,
-    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -79,8 +82,8 @@ export default function Main(props) {
     customPaging: (i) => (
       <div
         style={{
-          width: "10px",
-          height: "10px",
+          width: "15px",
+          height: "15px",
           border: "1px solid #000",
           borderRadius: "50%",
         }}
@@ -114,11 +117,8 @@ export default function Main(props) {
     ),
   };
 
-  const [slideProducts, setSlideProducts] = useState([]);
-  const [slideReviews, setSlideReviews] = useState([]);
-  const [slideBanners, setSlideBanners] = useState([]);
   useEffect(function () {
-    fetch(`https://react-board-exercise-api.herokuapp.com/api/lush/mainProduct?page=1&countPerPage=1`).then(function (res) {
+    fetch(`https://react-board-exercise-api.herokuapp.com/api/lush/mainProduct?page=1&countPerPage=3`).then(function (res) {
       res
         .json()
         .then(function (json) {
@@ -179,9 +179,9 @@ export default function Main(props) {
             <img src={titleImg} alt="나만 알고 싶은 향기" />
             <div className={styles["product-slide"]}>
               <Slider {...settingsProduct}>
-                {slideProducts.map(function (data) {
+                {slideProducts.map(function (data, index) {
                   return (
-                    <div>
+                    <div key={index}>
                       <Link to={data.thumb_url}>
                         <img src={data.thumb_url} alt={data.name} />
                         <br />
