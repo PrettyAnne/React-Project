@@ -153,7 +153,7 @@ export default function Main(props) {
           <h3>메인 광고 배너</h3>
           <div className={styles["main-banner"]}>
             <Slider {...settings}>
-              {slideBanners.map(function (data) {
+              {slideBanners && slideBanners.map(function (data) {
                 return (
                   <div>
                     <div
@@ -179,7 +179,7 @@ export default function Main(props) {
             <img src={titleImg} alt="나만 알고 싶은 향기" />
             <div className={styles["product-slide"]}>
               <Slider {...settingsProduct}>
-                {slideProducts.map(function (data, index) {
+                {slideProducts && slideProducts.map(function (data, index) {
                   return (
                     <div key={index}>
                       <Link to={data.thumb_url}>
